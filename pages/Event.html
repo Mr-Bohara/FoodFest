@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodFest - Explore Flavors of the Future</title>
+<!-- Font Awesome for search and footer contact icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/Event.css">
+</head>
+<body>
+
+<div class="page-container">
+
+  <!-- 1. HEADER NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main style="flex:1">
+  <!-- 2. HERO TITLE & SEARCH WRAPPER -->
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Explore the Flavors of the Future</h1>
+      <p>A curated selection of avant-garde culinary experiences, blending high-tech gastronomy with traditional festival soul. Join the elite tasting journey.</p>
+    </div>
+    <div class="search-wrapper">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search Events">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </div>
+  </div>
+
+  <!-- 3. PRODUCTS GRID LAYOUT -->
+  <div class="cards-grid" id="cardsGrid">
+    
+    <!-- Product 1 -->
+    <div class="product-card" data-name="Cyberpunk Sushi" data-price="Rs. 1,200">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="product-info">
+        <div class="title-price-row">
+          <h3 class="product-title">Cyberpunk Sushi</h3>
+          <span class="price-tag">Rs. 1,200</span>
+        </div>
+        <p class="product-desc">Molecular soy spheres and neon-infused smoked salmon rolls.</p>
+        <div class="card-buttons">
+          <button class="btn-book" onclick="bookNow('Cyberpunk Sushi')">Book Now</button>
+          <button class="btn-quickview" onclick="openQuickView('Cyberpunk Sushi', 'Rs. 1,200', 'Molecular soy spheres and neon-infused smoked salmon rolls engineered by Tokyo futurists.', 'Stall 04 — Tech Fusion', 'Chef Kenji Sato', 'Gluten, Seafood, Soy Caviar')">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card" data-name="Nitro Sorbet" data-price="Rs. 850">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="product-info">
+        <div class="title-price-row">
+          <h3 class="product-title">Nitro Sorbet</h3>
+          <span class="price-tag">Rs. 850</span>
+        </div>
+        <p class="product-desc">Sub-zero flash frozen dynamic berry extract combination.</p>
+        <div class="card-buttons">
+          <button class="btn-book" onclick="bookNow('Nitro Sorbet')">Book Now</button>
+          <button class="btn-quickview" onclick="openQuickView('Nitro Sorbet', 'Rs. 850', 'Sub-zero flash frozen dynamic berry extract combination using advanced cryo-churning systems.', 'Lounge 2 — Cryo Mixology', 'Chef Elena Rostova', 'Organic Berries, Liquid Nitrogen')">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card" data-name="3D Printed Cake" data-price="Rs. 1,500">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="product-info">
+        <div class="title-price-row">
+          <h3 class="product-title">3D Printed Cake</h3>
+          <span class="price-tag">Rs. 1,500</span>
+        </div>
+        <p class="product-desc">Architectural honey geometric honey structures printed live.</p>
+        <div class="card-buttons">
+          <button class="btn-book" onclick="bookNow('3D Printed Cake')">Book Now</button>
+          <button class="btn-quickview" onclick="openQuickView('3D Printed Cake', 'Rs. 1,500', 'Architectural honey geometric sugar filaments printed live via custom robotic precision needles.', 'Pavilion A — Patisserie Room', 'Engineer-Chef Marc Aris', 'Raw Honey, Vanilla Glaze, Almond Flour')">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card" data-name="Smoked Aero-Ribs" data-price="Rs. 1,950">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="product-info">
+        <div class="title-price-row">
+          <h3 class="product-title">Smoked Aero-Ribs</h3>
+          <span class="price-tag">Rs. 1,950</span>
+        </div>
+        <p class="product-desc">Pressure-infused smoked BBQ ribs matching modern methods.</p>
+        <div class="card-buttons">
+          <button class="btn-book" onclick="bookNow('Smoked Aero-Ribs')">Book Now</button>
+          <button class="btn-quickview" onclick="openQuickView('Smoked Aero-Ribs', 'Rs. 1,950', 'Pressure-infused premium smoked pork ribs cooked inside an isolated flavor-infusion matrix box.', 'Main Arena — Texas BBQ Pit', 'Pitmaster Dev Thapa', 'Hickory Smoke Essence, Secret Spice Rub')">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 5 (WIDE HORIZONTAL CARD) -->
+    <div class="wide-card" data-name="Galactic Tasting Platter" data-price="Rs. 4,500">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80');"></div>
+      <div class="product-info">
+        <div class="rating-container">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3 class="product-title">Galactic Tasting Platter</h3>
+        <span class="price-tag">Rs. 4,500</span>
+        <p class="product-desc">The ultimate grand culinary assortment across 5 distinct stations. Full interactive course menu with curated rare pairings.</p>
+        <button class="btn-secure" onclick="openQuickView('Galactic Tasting Platter', 'Rs. 4,500', 'The ultimate grand culinary assortment across 5 distinct stations featuring molecular gastronomy, live-fire grilling, sous-vide infusions, hydroponic greens, and nitro-frozen desserts.', 'Grand Pavilion — Main Stage', 'Collective of 5 Master Chefs', 'Premium Assorted Ingredients, Wine Pairings')">Secure Experience</button>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card" data-name="Cellular Greens" data-price="Rs. 990">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="product-info">
+        <div class="title-price-row">
+          <h3 class="product-title">Cellular Greens</h3>
+          <span class="price-tag">Rs. 990</span>
+        </div>
+        <p class="product-desc">Hydroponic vertical farm salad with bio-luminescent leaves.</p>
+        <div class="card-buttons">
+          <button class="btn-book" onclick="bookNow('Cellular Greens')">Book Now</button>
+          <button class="btn-quickview" onclick="openQuickView('Cellular Greens', 'Rs. 990', 'Hydroponic vertical farm crisp salad with bio-luminescent vinaigrette leaves and crunch elements.', 'Stall 19 — Eco Vegan', 'Dr. Sarah Lin', 'Organic Kelp Extract, Enzyme Greens')">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card" data-name="Sonic Gelato" data-price="Rs. 750">
+      <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="product-info">
+        <div class="title-price-row">
+          <h3 class="product-title">Sonic Gelato</h3>
+          <span class="price-tag">Rs. 750</span>
+        </div>
+        <p class="product-desc">Synchronized sound frequency texturized creamy Italian gelato.</p>
+        <div class="card-buttons">
+          <button class="btn-book" onclick="bookNow('Sonic Gelato')">Book Now</button>
+          <button class="btn-quickview" onclick="openQuickView('Sonic Gelato', 'Rs. 750', 'Synchronized sound frequency texturized creamy Italian gelato keeping air pockets at absolute perfection.', 'Theatre 1 — Acoustic Pastry', 'Chef Luigi Rossi', 'Pistachio Concentrate, Sonic Waves')">Quick View</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </main>
+
+  <!-- 4. FOOTER COMPONENT -->
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- QUICK VIEW MODAL OVERLAY -->
+<div class="modal-overlay" id="quickViewOverlay" onclick="closeQuickView()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeQuickView()">&times;</button>
+    <div class="modal-header-tag">Product Blueprint</div>
+    <h2 class="modal-title" id="m-title">Item Name</h2>
+    <div class="modal-price" id="m-price">Rs. 0</div>
+    <p class="modal-desc" id="m-desc">Product detailed description goes here.</p>
+    
+    <div class="modal-details-row"><strong>Stall Hub: </strong><span id="m-stall">Location</span></div>
+    <div class="modal-details-row"><strong>Master Chef: </strong><span id="m-chef">Chef Name</span></div>
+    <div class="modal-details-row"><strong>Key Composition: </strong><span id="m-ingredients">Ingredients</span></div>
+    
+    <button class="btn-book" style="margin-top: 20px; width: 100%; padding: 12px;" onclick="closeQuickView(); alert('Slot booked successfully!');">Confirm Slot Booking</button>
+  </div>
+</div>
+
+<script src="../js/Event.js"></script>
+</body>
+</html>

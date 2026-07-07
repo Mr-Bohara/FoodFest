@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest - About Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/About.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="about-hero">
+      <span class="hero-year-badge">2026</span>
+      <h1>The Future of Flavour</h1>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="window.location.href='Event.html'">Explore Our Festival</button>
+        <button class="btn-secondary" onclick="document.getElementById('missions').scrollIntoView({behavior:'smooth'})">Our Missions</button>
+      </div>
+    </section>
+
+    <!-- BEYOND THE PLATE -->
+    <section class="beyond-section" id="missions">
+      <div class="content-card">
+        <h2>Beyond the Plate</h2>
+        <p>FoodFest 2026 is not just a festival — it's a movement. We bring together the world's most innovative chefs, food technologists, and culinary artists to redefine what food means in the modern era. Every dish tells a story, every flavor carries a memory, and every experience is crafted to inspire.</p>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="pillars-section">
+      <h2 class="section-title">Our Foundations</h2>
+      <p class="section-subtitle">The Three pillars that guide every experience we crave</p>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3>Innovation</h3>
+          <p>Pushing the boundaries of gastronomy with cutting-edge techniques and molecular gastronomy.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
+          <h3>Passion</h3>
+          <p>Every chef, every ingredient, every dish is a labor of love and dedication to the craft.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Community</h3>
+          <p>Building bridges between cultures through the universal language of food and shared tables.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MASTERS -->
+    <section class="masters-section">
+      <h2 class="section-title">The Masters</h2>
+      <div class="masters-grid">
+        <div class="master-card">
+          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <h3>Chef Kenji Sato</h3>
+          <p>Tokyo Fusion</p>
+        </div>
+        <div class="master-card">
+          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <h3>Chef Elena Rostova</h3>
+          <p>Molecular Gastronomy</p>
+        </div>
+        <div class="master-card">
+          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <h3>Pitmaster Dev Thapa</h3>
+          <p>Smoke & Grill</p>
+        </div>
+        <div class="master-card">
+          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <h3>Chef Luigi Rossi</h3>
+          <p>Italian Patisserie</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <h2>Be Part of the Evolution</h2>
+      <p>Join us at FoodFest 2026 and witness the future of food unfold.</p>
+      <button class="btn-primary" onclick="window.location.href='BookTickets.html'">Get Your Tickets</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="../js/About.js"></script>
+</body>
+</html>

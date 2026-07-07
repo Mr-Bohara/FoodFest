@@ -1,0 +1,396 @@
+/* ==========================================
+   FOODFEST BRAND COLOR SYSTEM
+   ========================================== */
+:root {
+  --bg-main: #FFF8F3;
+  --bg-card: #FFFFFF;
+  --bg-section-alt: #FFF8F3;
+  --bg-navbar: #FFFFFF;
+  --bg-footer: #3B2218;
+  --text-heading: #1F1F1F;
+  --text-subheading: #3B2218;
+  --text-body: #4B5563;
+  --text-muted: #6B7280;
+  --text-white: #FFFFFF;
+  --text-footer-heading: #FFFFFF;
+  --text-footer-body: #D6D3D1;
+  --text-footer-link: #FDBA74;
+  --primary: #F97316;
+  --primary-hover: #EA580C;
+  --primary-active: #C2410C;
+  --primary-light: #FDBA74;
+  --primary-gradient: linear-gradient(135deg, #F97316, #FB923C);
+  --primary-focus: rgba(249,115,22,0.35);
+  --secondary: #3B2218;
+  --secondary-gradient: linear-gradient(135deg, #3B2218, #5A382A);
+  --success: #22C55E;
+  --success-hover: #16A34A;
+  --error: #EF4444;
+  --error-hover: #DC2626;
+  --border: #E5E7EB;
+  --divider: #E5E7EB;
+  --placeholder: #9CA3AF;
+  --footer-border: rgba(255,255,255,0.1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-card: 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-nav: 0 2px 8px rgba(0,0,0,0.04);
+  --gradient-primary: linear-gradient(135deg, #F97316, #FB923C);
+  --gradient-bg: linear-gradient(135deg, #FFF8F3, #FFE8D6);
+  --gradient-brown: linear-gradient(135deg, #3B2218, #5A382A);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+  --radius-full: 50%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  padding: 0;
+  color: var(--text-heading);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-navbar);
+  padding: 15px 30px;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-nav);
+}
+
+.logo img {
+  height: 32px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-subheading);
+  font-weight: 700;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-hover);
+}
+
+.login-btn {
+  background-color: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.login-btn-current {
+  opacity: 0.7;
+  cursor: default;
+  display: inline-block;
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: 15px;
+  background-color: var(--primary);
+  color: var(--text-white);
+}
+
+/* ==========================================
+   LOGIN CARD
+   ========================================== */
+.login-container {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 0 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.login-card {
+  border: 1px solid var(--border);
+  padding: 50px 40px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  text-align: center;
+  width: 100%;
+  box-shadow: var(--shadow-card);
+}
+
+.login-card h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.login-subtitle {
+  color: var(--text-body);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  color: var(--text-subheading);
+}
+
+.form-control {
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  outline: none;
+  padding: 16px 20px;
+  font-size: 15px;
+  color: var(--text-heading);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-focus);
+}
+
+.form-control::placeholder {
+  color: var(--placeholder);
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--gradient-primary);
+  color: var(--text-white);
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.divider {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--divider);
+}
+
+.divider:not(:empty)::before { margin-right: 1em; }
+.divider:not(:empty)::after { margin-left: 1em; }
+
+.google-btn {
+  width: 100%;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-heading);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-btn:hover {
+  border-color: var(--primary);
+}
+
+.google-btn i {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--primary);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+  color: var(--primary-hover);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--gradient-brown);
+  padding: 60px 80px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-footer-heading);
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 18px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: var(--text-footer-link);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: var(--primary-hover);
+}
+
+.footer-column ul li a.underlined {
+  text-decoration: underline;
+}
+
+.info-column {
+  min-width: 220px;
+}
+
+.icon-row {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 25px;
+  color: var(--text-footer-link);
+  font-size: 24px;
+}
+
+.text-block p {
+  color: var(--text-footer-body);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.logo-column {
+  max-width: 320px;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 38px;
+  margin-bottom: 20px;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.tagline {
+  color: var(--text-footer-body);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 24px;
+  }
+  .login-card h2 {
+    font-size: 26px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .footer {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    margin: 40px auto;
+  }
+}

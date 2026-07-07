@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest - Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/Gallery.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="gallery-hero">
+      <span class="hero-tag">THE CULINARY SPECTACLE</span>
+      <h1>Visions of Food Fest</h1>
+      <p>Experience it for yourself. Browse through moments captured from our previous festivals around the world.</p>
+    </section>
+
+    <section class="gallery-filters">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+      <button class="filter-btn" onclick="filterGallery('ceremony', this)">Ceremonies</button>
+      <button class="filter-btn" onclick="filterGallery('food', this)">Cuisine</button>
+      <button class="filter-btn" onclick="filterGallery('chef', this)">Chefs</button>
+      <button class="filter-btn" onclick="filterGallery('ambiance', this)">Ambiance</button>
+    </section>
+
+    <section class="gallery-grid">
+      <div class="gallery-item" data-category="ceremony" data-full="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=90" data-caption="Grand Opening Ceremony" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Grand Opening Ceremony</span>
+        </div>
+      </div>
+      <div class="gallery-item gallery-tall" data-category="chef" data-full="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=90" data-caption="Chef's Table Experience" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Chef's Table Experience</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="food" data-full="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=90" data-caption="Exotic Ingredients" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Exotic Ingredients</span>
+        </div>
+      </div>
+      <div class="gallery-item gallery-wide" data-category="chef" data-full="https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?auto=format&fit=crop&w=1200&q=90" data-caption="Live Cooking Stations" style="background-image: url('https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?auto=format&fit=crop&w=800&q=80');">
+        <div class="gallery-overlay">
+          <span>Live Cooking Stations</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="food" data-full="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=90" data-caption="Artisan Pastry" style="background-image: url('https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Artisan Pastry</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="food" data-full="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=1200&q=90" data-caption="International Cuisine" style="background-image: url('https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>International Cuisine</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="ambiance" data-full="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=90" data-caption="Fresh Produce" style="background-image: url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Fresh Produce</span>
+        </div>
+      </div>
+      <div class="gallery-item gallery-tall" data-category="chef" data-full="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=90" data-caption="Sushi Masterclass" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Sushi Masterclass</span>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="ambiance" data-full="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=90" data-caption="Dessert Gallery" style="background-image: url('https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=600&q=80');">
+        <div class="gallery-overlay">
+          <span>Dessert Gallery</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-cta">
+      <h2>Want to be featured?</h2>
+      <p>Share your FoodFest moments with us on social media using <strong>#FoodFest2026</strong></p>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="navigateLightbox(-1); event.stopPropagation();">&#10094;</button>
+    <button class="lightbox-next" onclick="navigateLightbox(1); event.stopPropagation();">&#10095;</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="../js/Gallery.js"></script>
+</body>
+</html>

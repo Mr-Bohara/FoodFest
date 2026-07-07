@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest 2026 - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/Home.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/Event.html">Events</a></li>
+      <li><a href="pages/FoodStalls.html">Food Stalls</a></li>
+      <li><a href="pages/Schedule.html">Schedule</a></li>
+      <li><a href="pages/Gallery.html">Gallery</a></li>
+      <li><a href="pages/BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='pages/Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span class="hero-year">2026</span>
+        <span class="hero-vip">VIP ACCESS</span>
+      </div>
+      <h1 class="hero-title">Food Fest</h1>
+      <p class="hero-subtitle">Experience the Gala</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="window.location.href='pages/BookTickets.html'">Buy Now</button>
+        <button class="btn-secondary" onclick="window.location.href='pages/Event.html'">View Menu</button>
+      </div>
+      <div class="hero-price-badge">
+        <span class="price-label">Starts From</span>
+        <span class="price-value">$299</span>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="countdown-section">
+      <h2 class="section-title">Counting Down to Perfection</h2>
+      <p class="section-subtitle">The Festival Begins In</p>
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <span class="countdown-number" id="countdown-days">00</span>
+          <span class="countdown-label">DAYS</span>
+        </div>
+        <div class="countdown-divider">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="countdown-hours">00</span>
+          <span class="countdown-label">HOURS</span>
+        </div>
+        <div class="countdown-divider">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="countdown-minutes">00</span>
+          <span class="countdown-label">MINUTES</span>
+        </div>
+        <div class="countdown-divider">:</div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="countdown-seconds">00</span>
+          <span class="countdown-label">SECONDS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURE / EXPLORE SECTION -->
+    <section class="culture-section">
+      <h2 class="section-title">Explore Our Culture</h2>
+      <div class="culture-cards">
+        <div class="culture-card">
+          <div class="culture-icon"><i class="fa-solid fa-utensils"></i></div>
+          <h3>Signature Culture</h3>
+          <p>Immerse yourself in a curated world of flavors where tradition meets innovation.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-icon"><i class="fa-solid fa-microphone"></i></div>
+          <h3>Voice of Gala</h3>
+          <p>Shared experiences from renowned chefs and culinary artists from around the globe.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Shared Experiences</h3>
+          <p>Connect with fellow food enthusiasts and create unforgettable memories together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS SECTION -->
+    <section class="partners-section">
+      <h2 class="section-title">Our Partners in Excellence</h2>
+      <div class="partners-grid">
+        <div class="partner-item"><i class="fa-solid fa-building"></i> Gourmet Co.</div>
+        <div class="partner-item"><i class="fa-solid fa-leaf"></i> Organic Farms</div>
+        <div class="partner-item"><i class="fa-solid fa-wine-glass"></i> Vino Select</div>
+        <div class="partner-item"><i class="fa-solid fa-cake"></i> Artisan Bakes</div>
+        <div class="partner-item"><i class="fa-solid fa-fish"></i> Fresh Catch</div>
+        <div class="partner-item"><i class="fa-solid fa-seedling"></i> Green Fields</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="index.html">Explore</a></li>
+        <li><a href="pages/Schedule.html">Schedule</a></li>
+        <li><a href="pages/Event.html">Venues</a></li>
+        <li><a href="pages/BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="pages/Contact.html">Contact Us</a></li>
+        <li><a href="pages/About.html">About</a></li>
+        <li><a href="pages/Privacy.html">Privacy Policy</a></li>
+        <li><a href="pages/Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+    <div class="footer-column logo-column">
+      <img src="images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="js/Home.js"></script>
+</body>
+</html>

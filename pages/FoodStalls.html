@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest - Food Stalls</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/FoodStalls.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="stalls-hero">
+      <h1>Food Stalls</h1>
+      <p>Home / Food Stalls</p>
+    </section>
+
+    <section class="stalls-search">
+      <div class="search-wrapper">
+        <input type="text" class="search-input" id="stallSearch" placeholder="Search for food items...">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      </div>
+    </section>
+
+    <section class="stalls-categories">
+      <button class="category-btn active" onclick="filterStalls('all', this)">All</button>
+      <button class="category-btn" onclick="filterStalls('nepali', this)">Nepali</button>
+      <button class="category-btn" onclick="filterStalls('indian', this)">Indian</button>
+      <button class="category-btn" onclick="filterStalls('chinese', this)">Chinese</button>
+      <button class="category-btn" onclick="filterStalls('dessert', this)">Dessert</button>
+      <button class="category-btn" onclick="filterStalls('drinks', this)">Drinks</button>
+    </section>
+
+    <section class="stalls-grid" id="stallsGrid">
+      <div class="stall-card" data-category="nepali">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Momos <span class="stall-badge">Nepali</span></h3>
+          <p>Steamed dumplings filled with spiced meat or vegetables, served with tomato achar.</p>
+          <span class="stall-price">Rs. 350</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="nepali">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1563379926898-05f4365c0b0a?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Sel Roti <span class="stall-badge">Nepali</span></h3>
+          <p>Traditional homemade ring-shaped rice bread, crispy outside and soft inside.</p>
+          <span class="stall-price">Rs. 150</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="indian">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Butter Chicken <span class="stall-badge">Indian</span></h3>
+          <p>Rich and creamy tomato-based curry with tender chicken pieces and naan bread.</p>
+          <span class="stall-price">Rs. 550</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="indian">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1630383249896-4f3a2eb8ee3f?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Biryani <span class="stall-badge">Indian</span></h3>
+          <p>Fragrant basmati rice layered with spiced meat, saffron, and caramelized onions.</p>
+          <span class="stall-price">Rs. 450</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="chinese">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Kung Pao Chicken <span class="stall-badge">Chinese</span></h3>
+          <p>Spicy stir-fried chicken with peanuts, vegetables, and Sichuan peppercorns.</p>
+          <span class="stall-price">Rs. 500</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="chinese">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Dim Sum Platter <span class="stall-badge">Chinese</span></h3>
+          <p>Assorted steamed dumplings with shrimp, pork, and vegetable fillings.</p>
+          <span class="stall-price">Rs. 600</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="dessert">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Gulab Jamun <span class="stall-badge">Dessert</span></h3>
+          <p>Deep-fried milk solids soaked in rose-flavored sugar syrup, served warm.</p>
+          <span class="stall-price">Rs. 200</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="dessert">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Ice Cream <span class="stall-badge">Dessert</span></h3>
+          <p>Premium homemade ice cream with exotic flavors like saffron-pistachio and mango.</p>
+          <span class="stall-price">Rs. 250</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="drinks">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Mango Lassi <span class="stall-badge">Drinks</span></h3>
+          <p>Refreshing yogurt-based drink blended with ripe mangoes and a hint of cardamom.</p>
+          <span class="stall-price">Rs. 200</span>
+        </div>
+      </div>
+      <div class="stall-card" data-category="drinks">
+        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=500&q=80');"></div>
+        <div class="stall-info">
+          <h3>Masala Chai <span class="stall-badge">Drinks</span></h3>
+          <p>Traditional spiced tea made with ginger, cardamom, cinnamon, and fresh milk.</p>
+          <span class="stall-price">Rs. 100</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="../js/FoodStalls.js"></script>
+</body>
+</html>

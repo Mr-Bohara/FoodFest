@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest - Book Tickets</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/BookTickets.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main>
+  <header class="ticket-hero">
+    <h1>Choose Your Journey</h1>
+    <p>Experience the finest culinary arts from across the globe with our curated festival tiers designed for every level of foodie.</p>
+  </header>
+
+  <div class="booking-layout">
+    <div class="tiers-grid">
+      
+      <!-- Standard Tier -->
+      <div class="tier-card" data-tier="standard" data-price="299">
+        <div class="tier-badge">STANDARD</div>
+        <div class="tier-price">$299</div>
+        <ul class="tier-features">
+          <li><i class="fa-solid fa-check"></i> General Admission Pass</li>
+          <li><i class="fa-solid fa-check"></i> Access to Main Pavilion</li>
+          <li><i class="fa-solid fa-check"></i> 5 Food Tasting Vouchers</li>
+          <li><i class="fa-solid fa-check"></i> Event Schedule Brochure</li>
+          <li><i class="fa-solid fa-xmark"></i> VIP Lounge Access</li>
+          <li><i class="fa-solid fa-xmark"></i> Meet the Chefs</li>
+        </ul>
+        <button class="tier-select-btn" onclick="selectTier('standard', 'Standard Pass', 299)">Select Tier</button>
+      </div>
+
+      <!-- Premium Tier (Featured) -->
+      <div class="tier-card featured" data-tier="premium" data-price="599">
+        <div class="tier-badge">PREMIUM</div>
+        <div class="tier-price">$599</div>
+        <ul class="tier-features">
+          <li><i class="fa-solid fa-check"></i> Premium Access Pass</li>
+          <li><i class="fa-solid fa-check"></i> Access to All Areas</li>
+          <li><i class="fa-solid fa-check"></i> 15 Food Tasting Vouchers</li>
+          <li><i class="fa-solid fa-check"></i> Welcome Cocktail Reception</li>
+          <li><i class="fa-solid fa-check"></i> VIP Lounge Access</li>
+          <li><i class="fa-solid fa-xmark"></i> Private Chef Session</li>
+        </ul>
+        <button class="tier-select-btn" onclick="selectTier('premium', 'Premium Pass', 599)">Select Tier</button>
+      </div>
+
+      <!-- VIP Tier -->
+      <div class="tier-card" data-tier="vip" data-price="999">
+        <div class="tier-badge">VIP</div>
+        <div class="tier-price">$999</div>
+        <ul class="tier-features">
+          <li><i class="fa-solid fa-check"></i> VIP All-Access Pass</li>
+          <li><i class="fa-solid fa-check"></i> Front Row Seating</li>
+          <li><i class="fa-solid fa-check"></i> Unlimited Food & Drinks</li>
+          <li><i class="fa-solid fa-check"></i> Private Chef Session</li>
+          <li><i class="fa-solid fa-check"></i> VIP Lounge Access</li>
+          <li><i class="fa-solid fa-check"></i> Meet the Chefs</li>
+        </ul>
+        <button class="tier-select-btn" onclick="selectTier('vip', 'VIP Pass', 999)">Select Tier</button>
+      </div>
+
+    </div>
+
+    <div class="summary-card" id="summaryCard">
+      <h3>Booking Summary</h3>
+      <div class="summary-row">
+        <span>Tier</span>
+        <span id="summaryTier">—</span>
+      </div>
+      <div class="summary-row">
+        <span>Base Price</span>
+        <span id="summaryPrice">$0</span>
+      </div>
+      <div class="summary-row">
+        <span>Service Fee</span>
+        <span id="summaryFee">$0</span>
+      </div>
+      <div class="summary-row">
+        <span>Quantity</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeQty(-1)">-</button>
+          <span id="summaryQty">1</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+      <div class="summary-row summary-total">
+        <span>Total</span>
+        <span id="summaryTotal">$0</span>
+      </div>
+      <button class="confirm-btn" onclick="confirmPurchase()">Confirm Purchase</button>
+      <p class="terms-notice">By Confirming, You agree to Food Fest's<br><a href="Terms.html">Terms & Conditions</a></p>
+    </div>
+  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="../js/BookTickets.js"></script>
+</body>
+</html>

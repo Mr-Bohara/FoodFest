@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest - Schedule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/Schedule.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="schedule-hero">
+      <h1>Festival Schedule</h1>
+      <p>Home / Schedule</p>
+    </section>
+
+    <section class="schedule-tabs">
+      <button class="tab-btn active" onclick="switchDay(1, this)">Day 1</button>
+      <button class="tab-btn" onclick="switchDay(2, this)">Day 2</button>
+      <button class="tab-btn" onclick="switchDay(3, this)">Day 3</button>
+    </section>
+
+    <section class="schedule-grid" id="scheduleGrid">
+      <!-- Day 1 -->
+      <div class="schedule-day active" id="day1">
+        <div class="schedule-card">
+          <div class="schedule-time">10:00 AM</div>
+          <div class="schedule-info">
+            <h3>Grand Opening Ceremony</h3>
+            <p>Welcome address by celebrity chefs and festival organizers. Champagne reception.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Main Stage</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">12:00 PM</div>
+          <div class="schedule-info">
+            <h3>Molecular Gastronomy Workshop</h3>
+            <p>Hands-on session with Chef Elena Rostova exploring liquid nitrogen techniques.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Tech Kitchen</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">2:30 PM</div>
+          <div class="schedule-info">
+            <h3>Street Food Championship</h3>
+            <p>Live competition between top street food vendors from across Asia.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Food Arena</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">5:00 PM</div>
+          <div class="schedule-info">
+            <h3>Wine & Cheese Pairing</h3>
+            <p>Curated tasting session featuring international wines and artisan cheeses.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> VIP Lounge</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">8:00 PM</div>
+          <div class="schedule-info">
+            <h3>Gala Dinner</h3>
+            <p>Five-course signature dinner prepared by the Festival's Master Chefs collective.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Grand Pavilion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 2 -->
+      <div class="schedule-day" id="day2">
+        <div class="schedule-card">
+          <div class="schedule-time">9:00 AM</div>
+          <div class="schedule-info">
+            <h3>Farmers' Market Breakfast</h3>
+            <p>Fresh organic breakfast featuring local produce and farm-to-table concepts.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Garden Terrace</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">11:00 AM</div>
+          <div class="schedule-info">
+            <h3>Sushi Masterclass</h3>
+            <p>Learn the art of sushi from Chef Kenji Sato, Tokyo's finest sushi master.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Japanese Pavilion</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">1:30 PM</div>
+          <div class="schedule-info">
+            <h3>BBQ Smoke-Off</h3>
+            <p>Pitmaster Dev Thapa leads a smoky competition of ribs, briskets, and more.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Texas BBQ Pit</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">4:00 PM</div>
+          <div class="schedule-info">
+            <h3>Plant-Based Revolution</h3>
+            <p>Exploring the future of vegan and plant-based cuisine with Dr. Sarah Lin.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Eco Theater</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">7:00 PM</div>
+          <div class="schedule-info">
+            <h3>Cultural Food Festival</h3>
+            <p>Experience cuisines from 20+ countries in one spectacular evening.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> International Zone</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day 3 -->
+      <div class="schedule-day" id="day3">
+        <div class="schedule-card">
+          <div class="schedule-time">10:00 AM</div>
+          <div class="schedule-info">
+            <h3>Pastry & Dessert Expo</h3>
+            <p>Chef Luigi Rossi presents the finest Italian patisserie and 3D-printed desserts.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Patisserie Hall</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">12:30 PM</div>
+          <div class="schedule-info">
+            <h3>Food Tech Summit</h3>
+            <p>Discussions on the future of food technology, AI in cooking, and sustainability.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Innovation Lab</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">3:00 PM</div>
+          <div class="schedule-info">
+            <h3>VIP Tasting Experience</h3>
+            <p>Exclusive tasting menu for VIP ticket holders with rare wine pairings.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> VIP Suite</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">6:00 PM</div>
+          <div class="schedule-info">
+            <h3>Awards Ceremony</h3>
+            <p>Announcing the best dishes, chefs, and food stalls of FoodFest 2026.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Main Stage</span>
+          </div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-time">9:00 PM</div>
+          <div class="schedule-info">
+            <h3>Closing Gala</h3>
+            <p>Grand finale with live music, fireworks, and a final toast to the festival.</p>
+            <span class="schedule-location"><i class="fa-solid fa-location-dot"></i> Grand Pavilion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="../js/Schedule.js"></script>
+</body>
+</html>

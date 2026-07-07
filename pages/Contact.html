@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodFest - Contact Us</title>
+  <link rel="stylesheet" href="../css/Contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- 1. HEADER NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo">
+    </div>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="Event.html">Events</a></li>
+      <li><a href="FoodStalls.html">Food Stalls</a></li>
+      <li><a href="Schedule.html">Schedule</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="BookTickets.html">Book Tickets</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="login-btn" onclick="window.location.href='Login.html'">Login</button>
+    </div>
+  </nav>
+
+  <header class="connect-section">
+    <h1 class="main-heading">
+      Let's Connect for the<br>
+      <span class="ultimate">Ultimate</span> <span class="feast">Feast</span>
+    </h1>
+    <p class="sub-text">
+      Questions about the gala? Our white-glove support team is here to ensure your experience is nothing short of extraordinary.
+    </p>
+    <div class="card-image-frame">
+      <img src="../images/others/restudentContact.png" alt="The Grand Pavilion Venue Presentation Card">
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="panel-card">
+      <h2 class="panel-title">Send a Secure Message</h2>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label>FULL NAME</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Dhanush Bohara" required>
+        </div>
+
+        <div class="form-group">
+          <label>EMAIL</label>
+          <input type="email" class="form-control" id="email" placeholder="mr@dhanushbohara.com.np" required>
+        </div>
+
+        <div class="form-group">
+          <label>INQUIRY CATEGORY</label>
+          <div class="custom-dropdown" id="inquiryDropdown">
+            <div class="form-control dropdown-trigger">
+              <span id="selectedCategory">VIP Table Reservations</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="dropdown-menu">
+              <div class="dropdown-item">VIP Table Reservations</div>
+              <div class="dropdown-item">General Admission Inquiry</div>
+              <div class="dropdown-item">Food Stall Registration</div>
+              <div class="dropdown-item">Media & Press Pass</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>YOUR MESSAGE</label>
+          <textarea class="form-control" id="message" placeholder="How can we assist you with your experience?" required></textarea>
+        </div>
+
+        <div class="submit-container">
+          <button type="submit" class="btn-submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel-card">
+      <div class="map-image-frame">
+        <img src="https://earth.google.com/web/@27.69832313,85.33841613,1312.44868954a,1392.53612845d,35y,0h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA?authuser=0" alt="World Map graphic context">
+      </div>
+
+      <div class="faq-container">
+        <h3>Inquiries & FAQs</h3>
+        
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Are VIP tables available for groups?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Yes, premium group configurations are fully supported. Our custom VIP packages scale elegantly to accommodate gatherings ranging from small private group tabs up to wide corporate gala assemblies with private bar service assets included.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>What are the operating hours of FoodFest?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>FoodFest gates open at 11:00 AM and events conclude by 10:00 PM daily across the festival timeline.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Is there parking available at the venue?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="accordion-content">
+            <p>Yes, dedicated multi-level parking structures and valet service items are completely managed near the primary entrance zones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="../index.html">Explore</a></li>
+        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Event.html">Venues</a></li>
+        <li><a href="BookTickets.html">VIP Packages</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column info-column">
+      <div class="icon-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <div class="text-block">
+        <p>www.foodfest.com</p>
+        <p>+977 9875642325</p>
+        <p>contact@foodfest.com</p>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+
+    <div class="footer-column logo-column">
+      <img src="../images/logo/logo.png" alt="FoodFest Logo" class="footer-logo">
+      <p class="tagline">Redefining the culinary landscape through innovation, art, and the universal language of food.</p>
+    </div>
+  </footer>
+
+  <script src="../js/Contact.js"></script>
+</body>
+</html>
