@@ -1,17 +1,6 @@
-// ==========================================
-// ABOUT PAGE - FIRE THEME INTERACTIVE FEATURES
-// ==========================================
+// -- About Page
 
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
-}
-
-// ==========================================
-// 1. ANIMATED COUNTER FOR STATS
-// ==========================================
+// 1. Animated counter for stats
 function animateCounters() {
   const statNumbers = document.querySelectorAll('.stat-number');
   if (!statNumbers.length) return;
@@ -62,9 +51,7 @@ function animateCounters() {
   if (statsSection) observer.observe(statsSection);
 }
 
-// ==========================================
-// 2. SCROLL REVEAL ANIMATIONS
-// ==========================================
+// 2. Scroll reveal animations
 function initScrollReveals() {
   const animateElements = [
     '.pillar-card', '.master-card', '.value-card',
@@ -111,9 +98,7 @@ function initScrollReveals() {
   });
 }
 
-// ==========================================
-// 3. FLAME BAR INTERACTIVE EFFECT
-// ==========================================
+// 3. Flame bar interactive effect
 function initFlameBar() {
   const segments = document.querySelectorAll('.flame-segment');
   if (!segments.length) return;
@@ -148,9 +133,7 @@ function initFlameBar() {
   });
 }
 
-// ==========================================
-// 4. PARALLAX ON HERO DECORATIVE ELEMENTS
-// ==========================================
+// 4. Parallax on hero elements
 function initParallax() {
   const heroDecor = document.querySelector('.about-hero-bg-decor');
   if (!heroDecor) return;
@@ -173,9 +156,7 @@ function initParallax() {
   });
 }
 
-// ==========================================
-// 5. MASTERS CARD INTERACTION
-// ==========================================
+// 5. Masters card interaction
 function initMasterCards() {
   const cards = document.querySelectorAll('.master-card');
   cards.forEach(card => {
@@ -190,31 +171,8 @@ function initMasterCards() {
   });
 }
 
-// ==========================================
-// INIT ON DOM READY
-// ==========================================
+// Init on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
-  // Close mobile menu on link click
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      const navLinks = document.getElementById('navLinks');
-      const hamburger = document.getElementById('hamburgerBtn');
-      if (navLinks) navLinks.classList.remove('open');
-      if (hamburger) hamburger.classList.remove('active');
-    });
-  });
-
-  // Highlight current page in nav
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinksAll = document.querySelectorAll('.nav-links a');
-  navLinksAll.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.style.opacity = '0.7';
-    }
-  });
-
-  // Initialize all features
   animateCounters();
   initScrollReveals();
   initFlameBar();

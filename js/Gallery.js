@@ -1,19 +1,9 @@
-// ==========================================
-// GALLERY PAGE - LIGHTBOX, FILTERING & NAV
-// ==========================================
+// -- Gallery Page
 
 let currentLightboxIndex = 0;
 let visibleItems = [];
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Highlight current page in nav
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) link.style.opacity = '0.7';
-  });
-
   // Initialize visible items for lightbox navigation
   updateVisibleItems();
 

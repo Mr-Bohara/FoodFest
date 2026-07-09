@@ -4,7 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFest - Food Stalls</title>
+  <meta name="description" content="Browse the diverse food stalls at FoodFest 2026. From Nepali momos to Chinese dim sum, discover cuisines from around the world at our culinary festival.">
+  <meta name="keywords" content="FoodFest, food stalls, Nepali, Indian, Chinese, dessert, drinks, culinary, food festival, Kathmandu">
+  <meta name="author" content="FoodFest">
+  <meta property="og:title" content="FoodFest - Food Stalls">
+  <meta property="og:description" content="Browse the diverse food stalls at FoodFest 2026. From Nepali momos to Chinese dim sum, discover cuisines from around the world at our culinary festival.">
+  <meta property="og:image" content="../images/logo/logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../images/logo/f_logo.png">
+  <link rel="apple-touch-icon" href="../images/logo/f_logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
   <link rel="stylesheet" href="../css/FoodStalls.css">
 </head>
 <body>
@@ -52,80 +62,80 @@
     </section>
 
     <section class="stalls-grid" id="stallsGrid">
-      <div class="stall-card" data-category="nepali">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="nepali" data-name="Momos" data-price="Rs. 350">
+        <div class="stall-image" style="background-image: url('../images/food/momos.jpg');"></div>
         <div class="stall-info">
           <h3>Momos <span class="stall-badge">Nepali</span></h3>
           <p>Steamed dumplings filled with spiced meat or vegetables, served with tomato achar.</p>
           <span class="stall-price">Rs. 350</span>
         </div>
       </div>
-      <div class="stall-card" data-category="nepali">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1563379926898-05f4365c0b0a?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="nepali" data-name="Sel Roti" data-price="Rs. 150">
+        <div class="stall-image" style="background-image: url('../images/food/sel-roti.jpg');"></div>
         <div class="stall-info">
           <h3>Sel Roti <span class="stall-badge">Nepali</span></h3>
           <p>Traditional homemade ring-shaped rice bread, crispy outside and soft inside.</p>
           <span class="stall-price">Rs. 150</span>
         </div>
       </div>
-      <div class="stall-card" data-category="indian">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="indian" data-name="Butter Chicken" data-price="Rs. 550">
+        <div class="stall-image" style="background-image: url('../images/food/butter-chicken.jpg');"></div>
         <div class="stall-info">
           <h3>Butter Chicken <span class="stall-badge">Indian</span></h3>
           <p>Rich and creamy tomato-based curry with tender chicken pieces and naan bread.</p>
           <span class="stall-price">Rs. 550</span>
         </div>
       </div>
-      <div class="stall-card" data-category="indian">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1630383249896-4f3a2eb8ee3f?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="indian" data-name="Biryani" data-price="Rs. 450">
+        <div class="stall-image" style="background-image: url('../images/food/biryani.jpg');"></div>
         <div class="stall-info">
           <h3>Biryani <span class="stall-badge">Indian</span></h3>
           <p>Fragrant basmati rice layered with spiced meat, saffron, and caramelized onions.</p>
           <span class="stall-price">Rs. 450</span>
         </div>
       </div>
-      <div class="stall-card" data-category="chinese">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="chinese" data-name="Kung Pao Chicken" data-price="Rs. 500">
+        <div class="stall-image" style="background-image: url('../images/food/kung-pao.jpg');"></div>
         <div class="stall-info">
           <h3>Kung Pao Chicken <span class="stall-badge">Chinese</span></h3>
           <p>Spicy stir-fried chicken with peanuts, vegetables, and Sichuan peppercorns.</p>
           <span class="stall-price">Rs. 500</span>
         </div>
       </div>
-      <div class="stall-card" data-category="chinese">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="chinese" data-name="Dim Sum Platter" data-price="Rs. 600">
+        <div class="stall-image" style="background-image: url('../images/food/dim-sum.jpg');"></div>
         <div class="stall-info">
           <h3>Dim Sum Platter <span class="stall-badge">Chinese</span></h3>
           <p>Assorted steamed dumplings with shrimp, pork, and vegetable fillings.</p>
           <span class="stall-price">Rs. 600</span>
         </div>
       </div>
-      <div class="stall-card" data-category="dessert">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="dessert" data-name="Gulab Jamun" data-price="Rs. 200">
+        <div class="stall-image" style="background-image: url('../images/food/avantgarde-cake.jpg');"></div>
         <div class="stall-info">
           <h3>Gulab Jamun <span class="stall-badge">Dessert</span></h3>
           <p>Deep-fried milk solids soaked in rose-flavored sugar syrup, served warm.</p>
           <span class="stall-price">Rs. 200</span>
         </div>
       </div>
-      <div class="stall-card" data-category="dessert">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="dessert" data-name="Ice Cream" data-price="Rs. 250">
+        <div class="stall-image" style="background-image: url('../images/food/ice-cream.jpg');"></div>
         <div class="stall-info">
           <h3>Ice Cream <span class="stall-badge">Dessert</span></h3>
           <p>Premium homemade ice cream with exotic flavors like saffron-pistachio and mango.</p>
           <span class="stall-price">Rs. 250</span>
         </div>
       </div>
-      <div class="stall-card" data-category="drinks">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="drinks" data-name="Mango Lassi" data-price="Rs. 200">
+        <div class="stall-image" style="background-image: url('../images/food/mango-lassi.jpg');"></div>
         <div class="stall-info">
           <h3>Mango Lassi <span class="stall-badge">Drinks</span></h3>
           <p>Refreshing yogurt-based drink blended with ripe mangoes and a hint of cardamom.</p>
           <span class="stall-price">Rs. 200</span>
         </div>
       </div>
-      <div class="stall-card" data-category="drinks">
-        <div class="stall-image" style="background-image: url('https://images.unsplash.com/photo-1558857563-b371033873b8?auto=format&fit=crop&w=500&q=80');"></div>
+      <div class="stall-card" data-category="drinks" data-name="Masala Chai" data-price="Rs. 100">
+        <div class="stall-image" style="background-image: url('../images/food/masala-chai.jpg');"></div>
         <div class="stall-info">
           <h3>Masala Chai <span class="stall-badge">Drinks</span></h3>
           <p>Traditional spiced tea made with ginger, cardamom, cinnamon, and fresh milk.</p>
@@ -133,7 +143,7 @@
         </div>
       </div>
     </section>
-  </main>
+  </main><br><br>
 
   <footer class="footer">
     <div class="footer-column">
@@ -151,7 +161,7 @@
         <li><a href="Contact.html">Contact Us</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="Privacy.html">Privacy Policy</a></li>
-        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+        <li><a href="Terms.html" >Terms of Service</a></li>
       </ul>
     </div>
     <div class="footer-column info-column">
@@ -174,6 +184,28 @@
     </div>
   </footer>
 
+  <!-- Sidebar hover zone -->
+  <div class="sidebar-hover-zone" id="sidebarHoverZone"></div>
+  <div class="sidebar-hint"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>More Pages</h3>
+      <button class="sidebar-close" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Privacy.html">Privacy Policy</a></li>
+      <li><a href="Terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="Signup.html">Sign Up</a></li>
+      <li><a href="ForgotPassword.html">Forgot Password</a></li>
+    </ul>
+  </div>
+
+  <script src="../js/shared.js"></script>
   <script src="../js/FoodStalls.js"></script>
 </body>
 </html>

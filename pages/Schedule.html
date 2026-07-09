@@ -4,7 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFest - Schedule</title>
+  <meta name="description" content="View the full 3-day schedule for FoodFest 2026. Plan your festival experience with cooking demos, tastings, workshops, and gala events.">
+  <meta name="keywords" content="FoodFest, schedule, events, workshops, cooking demos, food festival, 3-day, Kathmandu">
+  <meta name="author" content="FoodFest">
+  <meta property="og:title" content="FoodFest - Schedule">
+  <meta property="og:description" content="View the full 3-day schedule for FoodFest 2026. Plan your festival experience with cooking demos, tastings, workshops, and gala events.">
+  <meta property="og:image" content="../images/logo/logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../images/logo/f_logo.png">
+  <link rel="apple-touch-icon" href="../images/logo/f_logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
   <link rel="stylesheet" href="../css/Schedule.css">
 </head>
 <body>
@@ -192,7 +202,7 @@
         <li><a href="Contact.html">Contact Us</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="Privacy.html">Privacy Policy</a></li>
-        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+        <li><a href="Terms.html" >Terms of Service</a></li>
       </ul>
     </div>
     <div class="footer-column info-column">
@@ -215,6 +225,28 @@
     </div>
   </footer>
 
+  <!-- Sidebar hover zone -->
+  <div class="sidebar-hover-zone" id="sidebarHoverZone"></div>
+  <div class="sidebar-hint"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>More Pages</h3>
+      <button class="sidebar-close" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Privacy.html">Privacy Policy</a></li>
+      <li><a href="Terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="Signup.html">Sign Up</a></li>
+      <li><a href="ForgotPassword.html">Forgot Password</a></li>
+    </ul>
+  </div>
+
+  <script src="../js/shared.js"></script>
   <script src="../js/Schedule.js"></script>
 </body>
 </html>

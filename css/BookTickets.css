@@ -1,130 +1,6 @@
-/* ==========================================
-   FOODFEST BRAND COLOR SYSTEM
-   ========================================== */
-:root {
-  --bg-main: #FFF8F3;
-  --bg-card: #FFFFFF;
-  --bg-section-alt: #FFF8F3;
-  --bg-navbar: #FFFFFF;
-  --bg-footer: #3B2218;
-  --text-heading: #1F1F1F;
-  --text-subheading: #3B2218;
-  --text-body: #4B5563;
-  --text-muted: #6B7280;
-  --text-white: #FFFFFF;
-  --text-footer-heading: #FFFFFF;
-  --text-footer-body: #D6D3D1;
-  --text-footer-link: #FDBA74;
-  --primary: #F97316;
-  --primary-hover: #EA580C;
-  --primary-active: #C2410C;
-  --primary-light: #FDBA74;
-  --primary-gradient: linear-gradient(135deg, #F97316, #FB923C);
-  --primary-focus: rgba(249,115,22,0.35);
-  --secondary: #3B2218;
-  --secondary-gradient: linear-gradient(135deg, #3B2218, #5A382A);
-  --success: #22C55E;
-  --success-hover: #16A34A;
-  --success-light: rgba(34,197,94,0.1);
-  --error: #EF4444;
-  --error-hover: #DC2626;
-  --error-light: rgba(239,68,68,0.1);
-  --border: #E5E7EB;
-  --divider: #E5E7EB;
-  --placeholder: #9CA3AF;
-  --footer-border: rgba(255,255,255,0.1);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
-  --shadow-card: 0 4px 16px rgba(0,0,0,0.06);
-  --shadow-nav: 0 2px 8px rgba(0,0,0,0.04);
-  --gradient-primary: linear-gradient(135deg, #F97316, #FB923C);
-  --gradient-bg: linear-gradient(135deg, #FFF8F3, #FFE8D6);
-  --gradient-brown: linear-gradient(135deg, #3B2218, #5A382A);
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 24px;
-  --radius-xl: 30px;
-  --radius-full: 50%;
-}
+/* -- Book Tickets Page */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* Base Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  background-color: var(--bg-main);
-  padding: 0;
-  color: var(--text-heading);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main { flex: 1; }
-
-/* ==========================================
-   NAVBAR
-   ========================================== */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--bg-navbar);
-  padding: 15px 30px;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-nav);
-}
-
-.logo img {
-  height: 32px;
-  display: block;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 40px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: var(--text-subheading);
-  font-weight: 700;
-  font-size: 15px;
-  transition: color 0.2s ease;
-}
-
-.nav-links li a:hover {
-  color: var(--primary-hover);
-}
-
-.login-btn {
-  background-color: var(--primary);
-  color: var(--text-white);
-  border: none;
-  padding: 12px 28px;
-  border-radius: var(--radius-xl);
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.login-btn:hover {
-  background-color: var(--primary-hover);
-}
-
-/* ==========================================
-   TICKET HERO
-   ========================================== */
+/* Ticket Hero */
 .ticket-hero {
   text-align: center;
   padding: 60px 20px;
@@ -148,9 +24,7 @@ main { flex: 1; }
   margin: 0 auto;
 }
 
-/* ==========================================
-   BOOKING LAYOUT
-   ========================================== */
+/* Booking Layout */
 .booking-layout {
   max-width: 1200px;
   margin: 0 auto 60px auto;
@@ -167,9 +41,7 @@ main { flex: 1; }
   align-items: start;
 }
 
-/* ==========================================
-   TIER CARDS
-   ========================================== */
+/* Tier Cards */
 .tier-card {
   background-color: var(--bg-card);
   border-radius: var(--radius-lg);
@@ -182,10 +54,7 @@ main { flex: 1; }
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.tier-card:hover {
-  border-color: var(--primary);
-  box-shadow: var(--shadow-md);
-}
+.tier-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); }
 
 .tier-card.featured {
   background: linear-gradient(135deg, #FFF8F3, #FFE8D6);
@@ -193,14 +62,9 @@ main { flex: 1; }
   box-shadow: var(--shadow-md);
 }
 
-.tier-card.featured:hover {
-  border-color: var(--primary-hover);
-}
+.tier-card.featured:hover { border-color: var(--primary-hover); }
 
-.tier-card.selected {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px var(--primary-focus);
-}
+.tier-card.selected { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-focus); }
 
 .tier-badge {
   font-size: 12px;
@@ -211,9 +75,7 @@ main { flex: 1; }
   text-transform: uppercase;
 }
 
-.featured .tier-badge {
-  color: var(--primary);
-}
+.featured .tier-badge { color: var(--primary); }
 
 .tier-price {
   font-size: 36px;
@@ -222,11 +84,7 @@ main { flex: 1; }
   margin-bottom: 24px;
 }
 
-.tier-features {
-  list-style: none;
-  margin-bottom: 28px;
-  flex-grow: 1;
-}
+.tier-features { list-style: none; margin-bottom: 28px; flex-grow: 1; }
 
 .tier-features li {
   font-size: 14px;
@@ -237,18 +95,9 @@ main { flex: 1; }
   gap: 10px;
 }
 
-.tier-features li i {
-  width: 16px;
-  font-size: 14px;
-}
-
-.tier-features li .fa-check {
-  color: var(--success);
-}
-
-.tier-features li .fa-xmark {
-  color: var(--error);
-}
+.tier-features li i { width: 16px; font-size: 14px; }
+.tier-features li .fa-check { color: var(--success); }
+.tier-features li .fa-xmark { color: var(--error); }
 
 .tier-select-btn {
   width: 100%;
@@ -263,24 +112,12 @@ main { flex: 1; }
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.tier-select-btn:hover {
-  background-color: var(--primary);
-  color: var(--text-white);
-}
+.tier-select-btn:hover { background-color: var(--primary); color: var(--text-white); }
 
-.featured .tier-select-btn {
-  background: var(--gradient-primary);
-  color: var(--text-white);
-  border: none;
-}
+.featured .tier-select-btn { background: var(--gradient-primary); color: var(--text-white); border: none; }
+.featured .tier-select-btn:hover { opacity: 0.9; }
 
-.featured .tier-select-btn:hover {
-  opacity: 0.9;
-}
-
-/* ==========================================
-   SUMMARY CARD
-   ========================================== */
+/* Summary Card */
 .summary-card {
   background-color: var(--bg-card);
   border-radius: var(--radius-lg);
@@ -292,13 +129,7 @@ main { flex: 1; }
   top: 20px;
 }
 
-.summary-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 25px;
-  color: var(--text-heading);
-}
+.summary-card h3 { font-size: 22px; font-weight: 700; text-align: center; margin-bottom: 25px; color: var(--text-heading); }
 
 .summary-row {
   display: flex;
@@ -309,16 +140,9 @@ main { flex: 1; }
   color: var(--text-body);
 }
 
-.summary-row span:last-child {
-  font-weight: 600;
-  color: var(--text-heading);
-}
+.summary-row span:last-child { font-weight: 600; color: var(--text-heading); }
 
-.qty-control {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.qty-control { display: flex; align-items: center; gap: 12px; }
 
 .qty-btn {
   width: 28px;
@@ -336,9 +160,7 @@ main { flex: 1; }
   transition: border-color 0.2s ease;
 }
 
-.qty-btn:hover {
-  border-color: var(--primary);
-}
+.qty-btn:hover { border-color: var(--primary); }
 
 .summary-total {
   border-top: 2px solid var(--primary);
@@ -363,9 +185,7 @@ main { flex: 1; }
   transition: opacity 0.2s ease;
 }
 
-.confirm-btn:hover {
-  opacity: 0.9;
-}
+.confirm-btn:hover { opacity: 0.9; }
 
 .terms-notice {
   font-size: 11px;
@@ -375,142 +195,92 @@ main { flex: 1; }
   line-height: 1.4;
 }
 
-.terms-notice a {
-  color: var(--primary);
-  text-decoration: underline;
-  transition: color 0.2s ease;
+.terms-notice a { color: var(--primary); text-decoration: underline; transition: color 0.2s ease; }
+.terms-notice a:hover { color: var(--primary-hover); }
+
+/* Cart Section */
+.cart-section {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+  align-self: start;
+  position: sticky;
+  top: 20px;
 }
 
-.terms-notice a:hover {
-  color: var(--primary-hover);
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background: var(--gradient-brown);
-  padding: 60px 80px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  margin-top: auto;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  min-width: 160px;
-}
-
-.footer-column h3 {
-  font-size: 14px;
+.cart-section h3 {
+  font-size: 18px;
   font-weight: 700;
-  color: var(--text-footer-heading);
-  letter-spacing: 0.5px;
-  margin-bottom: 25px;
-}
-
-.footer-column ul {
-  list-style: none;
-}
-
-.footer-column ul li {
-  margin-bottom: 18px;
-}
-
-.footer-column ul li a {
-  text-decoration: none;
-  color: var(--text-footer-link);
-  font-size: 15px;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.footer-column ul li a:hover {
-  color: var(--primary-hover);
-}
-
-.footer-column ul li a.underlined {
-  text-decoration: underline;
-}
-
-.info-column {
-  min-width: 220px;
-}
-
-.icon-row {
-  display: flex;
-  gap: 22px;
-  margin-bottom: 25px;
-  color: var(--text-footer-link);
-  font-size: 24px;
-}
-
-.text-block p {
-  color: var(--text-footer-body);
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 12px;
-  line-height: 1.4;
-}
-
-.logo-column {
-  max-width: 320px;
-  align-items: flex-start;
-}
-
-.footer-logo {
-  height: 38px;
+  text-align: center;
   margin-bottom: 20px;
-  display: block;
-  filter: brightness(0) invert(1);
+  color: var(--text-heading);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
 }
 
-.tagline {
-  color: var(--text-footer-body);
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+}
+
+.cart-item-row:last-child { border-bottom: none; }
+
+.cart-item-name { font-size: 14px; font-weight: 600; color: var(--text-heading); flex: 1; }
+
+.cart-item-price { font-size: 13px; font-weight: 500; color: var(--text-body); white-space: nowrap; }
+
+.cart-remove-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: none;
+  background-color: rgba(239,68,68,0.1);
+  color: var(--error);
+  cursor: pointer;
   font-size: 14px;
-  line-height: 1.5;
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
 }
 
-/* ==========================================
-   RESPONSIVE
-   ========================================== */
+.cart-remove-btn:hover { background-color: var(--error); color: white; }
+
+.clear-cart-btn {
+  width: 100%;
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: var(--radius-xl);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.clear-cart-btn:hover { border-color: var(--error); color: var(--error); }
+
+/* Responsive */
 @media (max-width: 1024px) {
-  .booking-layout {
-    grid-template-columns: 1fr;
-  }
-  .tiers-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .summary-card {
-    position: static;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+  .booking-layout { grid-template-columns: 1fr; }
+  .tiers-grid { grid-template-columns: repeat(3, 1fr); }
+  .summary-card { position: static; max-width: 400px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
-  .tiers-grid {
-    grid-template-columns: 1fr;
-  }
-  .ticket-hero h1 {
-    font-size: 32px;
-  }
-  .nav-links {
-    display: none;
-  }
-  .footer {
-    padding: 40px 30px;
-  }
+  .tiers-grid { grid-template-columns: 1fr; }
+  .ticket-hero h1 { font-size: 32px; }
 }
 
 @media (max-width: 480px) {
-  .ticket-hero h1 {
-    font-size: 26px;
-  }
+  .ticket-hero h1 { font-size: 26px; }
 }

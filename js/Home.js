@@ -1,12 +1,4 @@
-// Responsive Navbar Menu Toggle
-    function toggleMenu() {
-      const navLinks = document.getElementById("navLinks");
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      navLinks.classList.toggle("open");
-      hamburgerBtn.classList.toggle("active");
-    }
-
-    // Live Target Countdown Timer (Set to 10 days out)
+// Live Target Countdown Timer (Set to 10 days out)
     const targetDate = new Date().getTime() + (10 * 24 * 60 * 60 * 1000);
 
     function updateCountdown() {
@@ -31,3 +23,38 @@
 
     const timerInterval = setInterval(updateCountdown, 1000);
     updateCountdown();
+
+// Menu Modal open/close
+function openMenuModal() {
+  document.getElementById('menuOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenuModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('menuOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close menu modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var overlay = document.getElementById('menuOverlay');
+    if (overlay && overlay.classList.contains('active')) {
+      closeMenuModal();
+    }
+  }
+});
+
+// Hero Background Slideshow (changes every 5 seconds)
+(function initHeroSlideshow() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  let current = 0;
+
+  setInterval(function() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+})();

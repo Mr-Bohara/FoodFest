@@ -4,7 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFest - Login</title>
+  <meta name="description" content="Sign in to your FoodFest account to continue your culinary journey. Access your tickets, bookings, and personalized festival experience.">
+  <meta name="keywords" content="FoodFest, login, sign in, account, food festival, culinary, tickets">
+  <meta name="author" content="FoodFest">
+  <meta property="og:title" content="FoodFest - Login">
+  <meta property="og:description" content="Sign in to your FoodFest account to continue your culinary journey. Access your tickets, bookings, and personalized festival experience.">
+  <meta property="og:image" content="../images/logo/logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../images/logo/f_logo.png">
+  <link rel="apple-touch-icon" href="../images/logo/f_logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
   <link rel="stylesheet" href="../css/Login.css">
 </head>
 <body>
@@ -95,7 +105,7 @@
       </button>
 
       <p class="signup-text">
-        Don't have an account? <a href="../index.html">Explore FoodFest</a>
+        Don't have an account? <a href="Signup.html">Create Account</a>
       </p>
     </div>
   </main>
@@ -117,7 +127,7 @@
         <li><a href="Contact.html">Contact Us</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="Privacy.html">Privacy Policy</a></li>
-        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+        <li><a href="Terms.html" >Terms of Service</a></li>
       </ul>
     </div>
 
@@ -142,6 +152,28 @@
     </div>
   </footer>
 
+  <!-- Sidebar hover zone -->
+  <div class="sidebar-hover-zone" id="sidebarHoverZone"></div>
+  <div class="sidebar-hint"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>More Pages</h3>
+      <button class="sidebar-close" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Privacy.html">Privacy Policy</a></li>
+      <li><a href="Terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="Signup.html">Sign Up</a></li>
+      <li><a href="ForgotPassword.html">Forgot Password</a></li>
+    </ul>
+  </div>
+
+  <script src="../js/shared.js"></script>
   <script src="../js/Login.js"></script>
 </body>
 </html>

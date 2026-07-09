@@ -1,49 +1,9 @@
-/* ==========================================
-   FOODFEST BRAND COLOR SYSTEM + PRIVACY PAGE STYLES
-   ========================================== */
-:root {
-  --bg-main: #FFF8F3; --bg-card: #FFFFFF;
-  --bg-navbar: #FFFFFF; --bg-footer: #3B2218;
-  --text-heading: #1F1F1F; --text-subheading: #3B2218; --text-body: #4B5563;
-  --text-muted: #6B7280; --text-white: #FFFFFF;
-  --text-footer-heading: #FFFFFF; --text-footer-body: #D6D3D1; --text-footer-link: #FDBA74;
-  --primary: #F97316; --primary-hover: #EA580C;
-  --primary-gradient: linear-gradient(135deg, #F97316, #FB923C);
-  --secondary: #3B2218;
-  --secondary-gradient: linear-gradient(135deg, #3B2218, #5A382A);
-  --border: #E5E7EB;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
-  --shadow-card: 0 4px 16px rgba(0,0,0,0.06);
-  --shadow-nav: 0 2px 8px rgba(0,0,0,0.04);
-  --gradient-primary: linear-gradient(135deg, #F97316, #FB923C);
-  --gradient-bg: linear-gradient(135deg, #FFF8F3, #FFE8D6);
-  --gradient-brown: linear-gradient(135deg, #3B2218, #5A382A);
-  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 24px; --radius-xl: 30px;
-}
+/* -- Privacy Page */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-
-body { background-color: var(--bg-main); padding: 0; color: var(--text-heading); min-height: 100vh; display: flex; flex-direction: column; }
-main { flex: 1; }
-
-/* NAVBAR */
-.navbar { display: flex; align-items: center; justify-content: space-between; background-color: var(--bg-navbar); padding: 15px 30px; border-radius: 0 0 var(--radius-lg) var(--radius-lg); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-nav); }
-.logo img { height: 32px; display: block; }
-.nav-links { display: flex; list-style: none; gap: 40px; }
-.nav-links li a { text-decoration: none; color: var(--text-subheading); font-weight: 700; font-size: 15px; transition: color 0.2s ease; }
-.nav-links li a:hover { color: var(--primary-hover); }
-.login-btn { background-color: var(--primary); color: var(--text-white); border: none; padding: 12px 28px; border-radius: var(--radius-xl); font-weight: 600; font-size: 15px; cursor: pointer; transition: background-color 0.2s ease; }
-.login-btn:hover { background-color: var(--primary-hover); }
-
-/* HERO */
 .privacy-hero { text-align: center; padding: 60px 20px; max-width: 700px; margin: 0 auto; }
 .privacy-hero h1 { font-size: 44px; font-weight: 800; color: var(--text-heading); margin-bottom: 16px; letter-spacing: -1px; }
 .privacy-hero p { font-size: 15px; color: var(--text-body); line-height: 1.6; }
 
-/* CONTENT GRID */
 .privacy-content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 .privacy-card { background: var(--bg-card); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm); transition: border-color 0.2s ease; }
 .privacy-card:hover { border-color: var(--primary); }
@@ -51,26 +11,7 @@ main { flex: 1; }
 .privacy-card h2 { font-size: 20px; color: var(--text-heading); margin-bottom: 12px; }
 .privacy-card p { font-size: 14px; color: var(--text-body); line-height: 1.7; }
 
-/* FOOTER */
-.footer { display: flex; justify-content: space-between; align-items: flex-start; background: var(--gradient-brown); padding: 60px 80px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; margin-top: auto; flex-wrap: wrap; gap: 40px; }
-.footer-column { display: flex; flex-direction: column; min-width: 160px; }
-.footer-column h3 { font-size: 14px; font-weight: 700; color: var(--text-footer-heading); letter-spacing: 0.5px; margin-bottom: 25px; }
-.footer-column ul { list-style: none; }
-.footer-column ul li { margin-bottom: 18px; }
-.footer-column ul li a { text-decoration: none; color: var(--text-footer-link); font-size: 15px; font-weight: 500; transition: color 0.2s ease; }
-.footer-column ul li a:hover { color: var(--primary-hover); }
-.footer-column ul li a.underlined { text-decoration: underline; }
-.info-column { min-width: 220px; }
-.icon-row { display: flex; gap: 22px; margin-bottom: 25px; color: var(--text-footer-link); font-size: 24px; }
-.text-block p { color: var(--text-footer-body); font-size: 15px; font-weight: 500; margin-bottom: 12px; line-height: 1.4; }
-.logo-column { max-width: 320px; align-items: flex-start; }
-.footer-logo { height: 38px; margin-bottom: 20px; display: block; filter: brightness(0) invert(1); }
-.tagline { color: var(--text-footer-body); font-size: 14px; line-height: 1.5; font-weight: 400; }
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .privacy-content { grid-template-columns: 1fr; }
   .privacy-hero h1 { font-size: 32px; }
-  .nav-links { display: none; }
-  .footer { padding: 40px 30px; }
 }

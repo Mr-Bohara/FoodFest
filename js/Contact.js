@@ -1,25 +1,6 @@
-// ==========================================
-// CONTACT PAGE - INTERACTIVE FEATURES
-// ==========================================
-
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
-}
+// -- Contact Page
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Highlight current page in navbar
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.style.opacity = '0.7';
-    }
-  });
-
   // 1. FORM CATEGORY DROPDOWN TOGGLE
   const dropdown = document.getElementById('inquiryDropdown');
   if (!dropdown) return;
@@ -74,10 +55,10 @@ function handleSubmit(event) {
   const email = document.getElementById('email').value;
   
   if (!email.includes('@') || !email.includes('.')) {
-    alert('Please enter a valid email address.');
+    showInlineError('email', 'Please enter a valid email address.');
     return;
   }
   
-  alert(`Thank you, ${name}! Your message has been submitted successfully. Our team will get back to you shortly.`);
+  showToast(`Thank you, ${name}! Your message has been submitted successfully.`);
   document.getElementById('contactForm').reset();
 }

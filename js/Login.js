@@ -1,17 +1,6 @@
-// ==========================================
-// LOGIN PAGE - INTERACTIVE FEATURES
-// ==========================================
+// -- Login Page
 
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
-}
-
-// ==========================================
-// 1. PASSWORD VISIBILITY TOGGLE
-// ==========================================
+// 1. Password visibility toggle
 function togglePassword() {
   const passwordInput = document.getElementById('loginPassword');
   const toggleIcon = document.getElementById('toggleIcon');
@@ -25,9 +14,7 @@ function togglePassword() {
   }
 }
 
-// ==========================================
-// 2. LOGIN FORM HANDLER
-// ==========================================
+// 2. Login form handler
 function handleLogin(event) {
   event.preventDefault();
   
@@ -87,7 +74,7 @@ function handleLogin(event) {
   
   // Simulate sign in delay
   setTimeout(() => {
-    alert(`Welcome back! You have been logged in successfully.\n\nRedirecting to your dashboard...`);
+    showToast('Welcome back! You have been logged in successfully.');
     
     // Reset button state
     submitBtn.disabled = false;
@@ -96,14 +83,10 @@ function handleLogin(event) {
     email.classList.remove('success');
     password.classList.remove('success');
     document.getElementById('loginForm').reset();
-    
-    // In a real app: window.location.href = 'Home.html';
   }, 800);
 }
 
-// ==========================================
-// 3. GOOGLE SIGN-IN BUTTON
-// ==========================================
+// 3. Google sign-in button
 document.addEventListener('DOMContentLoaded', function() {
   const googleBtn = document.querySelector('.google-btn');
   if (googleBtn) {
@@ -114,24 +97,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.disabled = true;
       
       setTimeout(() => {
-        alert('Google Sign-In integration will be available soon. Please use email login for now.');
+        showToast('Google Sign-In integration coming soon. Please use email login.', 'info');
         this.innerHTML = originalContent;
         this.disabled = false;
       }, 600);
     });
   }
   
-  // 4. HIGHLIGHT CURRENT PAGE IN NAV
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.style.opacity = '0.7';
-    }
-  });
-  
-  // 5. REAL-TIME INPUT VALIDATION CLEAR
+  // 4. REAL-TIME INPUT VALIDATION CLEAR
   const emailInput = document.getElementById('loginEmail');
   const passwordInput = document.getElementById('loginPassword');
   

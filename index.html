@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFest 2026 - Home</title>
+  <meta name="description" content="Experience the global reimagining of gastronomy at FoodFest 2026 in Kathmandu. Michelin chefs, authentic artisans, and unforgettable culinary experiences.">
+  <meta name="keywords" content="FoodFest, food festival, culinary, gastronomy, Kathmandu, food event, 2026">
+  <meta name="author" content="FoodFest">
+  <meta property="og:title" content="FoodFest 2026 - Home">
+  <meta property="og:description" content="Experience the global reimagining of gastronomy at FoodFest 2026 in Kathmandu. Michelin chefs, authentic artisans, and unforgettable culinary experiences.">
+  <meta property="og:image" content="images/logo/logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/logo/f_logo.png">
+  <link rel="apple-touch-icon" href="images/logo/f_logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" href="css/Home.css">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images\logo\f_logo.png">
 </head>
 <body>
 
@@ -32,6 +40,15 @@
   </nav>
 
     <header class="hero-section">
+    <!-- Hero Background Slideshow -->
+    <div class="hero-slideshow">
+      <div class="hero-slide active" style="background-image: url('images/food/galactic-platter.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/food/himalayan-herbs.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/food/smokehouse-meat.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/food/nitro-sorbet.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/food/molecular-dessert.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('images/food/grill-live.jpg');"></div>
+    </div>
     <main class="hero-container">
       
       <section class="left-content">
@@ -41,8 +58,8 @@
           Experience the global reimagining of gastronomy in the heart of Kathmandu. Joining forces with world-renowned Michelin chefs and authentic master artisans, FoodFest 2026 bridges technological fine dining innovation with timeless cultural recipe heritages.
         </p>
         <div class="cta-buttons">
-          <button class="btn btn-primary" onclick="alert('Welcome to the Food Fest Gala portal.')">Experience the Gala</button>
-          <button class="btn btn-secondary" onclick="alert('Loading interactive digital menu portfolio...')">View Menu</button>
+          <button class="btn btn-primary" onclick="window.location.href='pages/Event.html'">Experience the Gala</button>
+          <button class="btn btn-secondary" onclick="openMenuModal()">View Menu</button>
         </div>
       </section>
 
@@ -68,7 +85,7 @@
               <span class="price-label">Starts From</span>
               <span class="price-amount">$299</span>
             </div>
-            <button class="btn-buy" onclick="alert('Adding 1x VIP Digital Pass 2026 to secure checkout wallet.')">Buy Now</button>
+            <button class="btn-buy" onclick="window.location.href='pages/BookTickets.html'">Buy Now</button>
           </div>
         </div>
       </section>
@@ -116,21 +133,21 @@
     </div>
 
     <div class="grid-three-columns">
-      <div class="culture-card" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80')">
+      <div class="culture-card" style="background-image: url('images/food/himalayan-herbs.jpg')">
         <div class="card-content">
           <span class="card-tag">Artisan Fusion</span>
           <h3 class="card-item-title">Himalayan Herbs</h3>
           <p class="card-item-desc">Discover complex mountain profiles reimagined through high-altitude foraging and modern molecular chemistry.</p>
         </div>
       </div>
-      <div class="culture-card" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80')">
+      <div class="culture-card" style="background-image: url('images/food/smokehouse-meat.jpg')">
         <div class="card-content">
           <span class="card-tag">Fire &amp; Craft</span>
           <h3 class="card-item-title">Smokehouse Heritage</h3>
           <p class="card-item-desc">Slow-braised meats tracking hundreds of years of nomadic open-pit fire seasoning techniques.</p>
         </div>
       </div>
-      <div class="culture-card" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80')">
+      <div class="culture-card" style="background-image: url('images/food/avantgarde-cake.jpg')">
         <div class="card-content">
           <span class="card-tag">Sweet Mastery</span>
           <h3 class="card-item-title">Avant-Garde Pastry</h3>
@@ -144,12 +161,12 @@
 
     <div class="grid-two-columns">
       <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80')"></div>
+        <div class="testimonial-avatar" style="background-image: url('images/testimonials/avatar-woman.jpg')"></div>
         <p class="testimonial-text">"An absolute triumph of taste and presentation. The layout, digital infrastructure, and depth of international flavors completely blew away my expectations."</p>
         <p class="testimonial-author">— Aria Sharma, Culinary Critic</p>
       </div>
       <div class="testimonial-card">
-        <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80')"></div>
+        <div class="testimonial-avatar" style="background-image: url('images/testimonials/avatar-man.jpg')"></div>
         <p class="testimonial-text">"A masterfully coordinated venue. Getting face-to-face feedback from hundreds of food enthusiasts inside such a modern setup was unforgettable."</p>
         <p class="testimonial-author">— Chef Marcus Vance, Presenter</p>
       </div>
@@ -161,10 +178,10 @@
     <div class="partners-inner">
       <p class="section-subtitle">Our Partners in Excellence</p>
       <div class="partners-grid">
-        <div class="partner-logo-placeholder"><i class="fa-solid fa-wine-glass"></i> Gourmet Global</div>
-        <div class="partner-logo-placeholder"><i class="fa-solid fa-leaf"></i> EcoOrganics</div>
-        <div class="partner-logo-placeholder"><i class="fa-solid fa-building-columns"></i> National Arts</div>
-        <div class="partner-logo-placeholder"><i class="fa-solid fa-droplet"></i> Alpine Springs</div>
+        <div class="partner-logo-placeholder"></i> Gourmet Global</div>
+        <div class="partner-logo-placeholder"></i> EcoOrganics</div>
+        <div class="partner-logo-placeholder"></i> National Arts</div>
+        <div class="partner-logo-placeholder"></i> Alpine Springs</div>
       </div>
     </div>
   </section>
@@ -186,7 +203,7 @@
         <li><a href="pages/Contact.html">Contact Us</a></li>
         <li><a href="pages/About.html">About</a></li>
         <li><a href="pages/Privacy.html">Privacy Policy</a></li>
-        <li><a href="pages/Terms.html" class="underlined">Terms of Service</a></li>
+        <li><a href="pages/Terms.html" >Terms of Service</a></li>
       </ul>
     </div>
     <div class="footer-column info-column">
@@ -209,6 +226,113 @@
     </div>
   </footer>
 
+  <!-- Sidebar hover zone -->
+  <div class="sidebar-hover-zone" id="sidebarHoverZone"></div>
+  <div class="sidebar-hint"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>More Pages</h3>
+      <button class="sidebar-close" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="pages/About.html">About</a></li>
+      <li><a href="pages/Contact.html">Contact</a></li>
+      <li><a href="pages/Privacy.html">Privacy Policy</a></li>
+      <li><a href="pages/Terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="pages/Login.html">Login</a></li>
+      <li><a href="pages/Signup.html">Sign Up</a></li>
+      <li><a href="pages/ForgotPassword.html">Forgot Password</a></li>
+    </ul>
+  </div>
+
+  <!-- Menu Modal -->
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMenuModal(event)">
+    <div class="menu-modal" onclick="event.stopPropagation()">
+      <div class="menu-modal-header">
+        <h2>FoodFest <span>Menu</span></h2>
+        <button class="menu-close-btn" onclick="closeMenuModal()">&times;</button>
+      </div>
+
+      <div class="menu-category">
+        <h3>Signature Mains</h3>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Cyberpunk Sushi</div>
+            <div class="menu-item-desc">Molecular soy spheres and neon-infused smoked salmon rolls</div>
+          </div>
+          <div class="menu-item-price">Rs. 1,200</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Smoked Aero-Ribs</div>
+            <div class="menu-item-desc">Pressure-infused smoked BBQ ribs with secret spice rub</div>
+          </div>
+          <div class="menu-item-price">Rs. 1,950</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Galactic Tasting Platter</div>
+            <div class="menu-item-desc">Ultimate culinary assortment across 5 distinct stations</div>
+          </div>
+          <div class="menu-item-price">Rs. 4,500</div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Desserts & Small Bites</h3>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Nitro Sorbet</div>
+            <div class="menu-item-desc">Sub-zero flash frozen dynamic berry extract combination</div>
+          </div>
+          <div class="menu-item-price">Rs. 850</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">3D Printed Cake</div>
+            <div class="menu-item-desc">Architectural honey geometric structures printed live</div>
+          </div>
+          <div class="menu-item-price">Rs. 1,500</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Sonic Gelato</div>
+            <div class="menu-item-desc">Sound frequency texturized creamy Italian gelato</div>
+          </div>
+          <div class="menu-item-price">Rs. 750</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Cellular Greens</div>
+            <div class="menu-item-desc">Hydroponic vertical farm salad with bio-luminescent leaves</div>
+          </div>
+          <div class="menu-item-price">Rs. 990</div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>Drinks</h3>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Artisan Cocktails</div>
+            <div class="menu-item-desc">Handcrafted molecular mixology selection</div>
+          </div>
+          <div class="menu-item-price">Rs. 600</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-left">
+            <div class="menu-item-name">Premium Wine Pairing</div>
+            <div class="menu-item-desc">Curated rare pairings from international vineyards</div>
+          </div>
+          <div class="menu-item-price">Rs. 1,200</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/shared.js"></script>
   <script src="js/Home.js"></script>
 </body>
 </html>

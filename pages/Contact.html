@@ -4,8 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoodFest - Contact Us</title>
-  <link rel="stylesheet" href="../css/Contact.css">
+  <meta name="description" content="Get in touch with the FoodFest team. Questions about tickets, stalls, or VIP experiences? Our support team is here to help with your culinary journey.">
+  <meta name="keywords" content="FoodFest, contact, support, food festival, inquiry, Kathmandu, culinary event">
+  <meta name="author" content="FoodFest">
+  <meta property="og:title" content="FoodFest - Contact Us">
+  <meta property="og:description" content="Get in touch with the FoodFest team. Questions about tickets, stalls, or VIP experiences? Our support team is here to help with your culinary journey.">
+  <meta property="og:image" content="../images/logo/logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../images/logo/f_logo.png">
+  <link rel="apple-touch-icon" href="../images/logo/f_logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="../css/Contact.css">
 </head>
 <body>
 
@@ -87,7 +97,7 @@
 
     <section class="panel-card">
       <div class="map-image-frame">
-        <img src="https://earth.google.com/web/@27.69832313,85.33841613,1312.44868954a,1392.53612845d,35y,0h,0t,0r/data=CgRCAggBOgMKATBCAggASg0I____________ARAA?authuser=0" alt="World Map graphic context">
+        <iframe src="https://maps.google.com/maps?q=Kathmandu%20Nepal&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div class="faq-container">
@@ -144,7 +154,7 @@
         <li><a href="Contact.html">Contact Us</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="Privacy.html">Privacy Policy</a></li>
-        <li><a href="Terms.html" class="underlined">Terms of Service</a></li>
+        <li><a href="Terms.html" >Terms of Service</a></li>
       </ul>
     </div>
 
@@ -169,6 +179,28 @@
     </div>
   </footer>
 
+  <!-- Sidebar hover zone -->
+  <div class="sidebar-hover-zone" id="sidebarHoverZone"></div>
+  <div class="sidebar-hint"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>More Pages</h3>
+      <button class="sidebar-close" onclick="closeSidebar()">&times;</button>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Privacy.html">Privacy Policy</a></li>
+      <li><a href="Terms.html">Terms &amp; Conditions</a></li>
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="Signup.html">Sign Up</a></li>
+      <li><a href="ForgotPassword.html">Forgot Password</a></li>
+    </ul>
+  </div>
+
+  <script src="../js/shared.js"></script>
   <script src="../js/Contact.js"></script>
 </body>
 </html>

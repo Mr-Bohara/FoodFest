@@ -1,13 +1,4 @@
-// ==========================================
-// BOOK TICKETS PAGE - INTERACTIVE FEATURES
-// ==========================================
-
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
-}
+// -- Book Tickets Page
 
 let selectedTier = null;
 let selectedPrice = 0;
@@ -52,27 +43,70 @@ function updateSummary() {
   document.getElementById('summaryTotal').textContent = total > 0 ? `$${total.toLocaleString()}` : '$0';
 }
 
-// 4. CONFIRM PURCHASE
+// 4. CART FUNCTIONS
+function renderCartItems() {
+  const cart = JSON.parse(localStorage.getItem('foodfestCart')) || [];
+  const container = document.getElementById('cartItemsContainer');
+  const cartSection = document.getElementById('cartSection');
+  
+  if (!container) return;
+  
+  if (cart.length === 0) {
+    cartSection.style.display = 'none';
+    return;
+  }
+  
+  cartSection.style.display = 'block';
+  container.innerHTML = '';
+  
+  cart.forEach((item, index) => {
+    const row = document.createElement('div');
+    row.className = 'cart-item-row';
+    row.innerHTML = `
+      <span class="cart-item-name">${item.name}</span>
+      <span class="cart-item-price">${item.price || '—'}</span>
+      <button class="cart-remove-btn" onclick="removeCartItem(${index})">&times;</button>
+    `;
+    container.appendChild(row);
+  });
+}
+
+function removeCartItem(index) {
+  let cart = JSON.parse(localStorage.getItem('foodfestCart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('foodfestCart', JSON.stringify(cart));
+  renderCartItems();
+  showToast('Item removed from cart.');
+}
+
+function clearCart() {
+  localStorage.removeItem('foodfestCart');
+  renderCartItems();
+  showToast('Cart cleared.');
+}
+
+// 5. CONFIRM PURCHASE
 function confirmPurchase() {
   if (!selectedTier) {
-    alert('Please select a ticket tier first.');
+    showInlineError('summaryTotal', 'Please select a ticket tier first.');
     return;
   }
   
   const total = document.getElementById('summaryTotal').textContent;
-  alert(`🎉 Purchase Confirmed!\n\nTier: ${selectedName}\nQuantity: ${quantity}\nTotal: ${total}\n\nThank you for booking with FoodFest 2026! Your e-tickets will be sent to your registered email.`);
+  showToast('Purchase Confirmed! Thank you for your order.');
+  clearCart();
+  // Reset selection
+  selectedTier = null;
+  selectedName = '';
+  selectedPrice = 0;
+  quantity = 1;
+  document.querySelectorAll('.tier-card').forEach(card => card.classList.remove('selected'));
+  document.getElementById('summaryQty').textContent = '1';
+  updateSummary();
 }
 
-// 5. HIGHLIGHT CURRENT PAGE IN NAV
+// 6. INIT ON DOM READY
 document.addEventListener('DOMContentLoaded', function() {
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.style.opacity = '0.7';
-    }
-  });
-  
   updateSummary();
+  renderCartItems();
 });

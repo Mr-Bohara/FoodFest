@@ -1,13 +1,4 @@
-// ==========================================
-// EVENTS PAGE - INTERACTIVE FEATURES
-// ==========================================
-
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
-}
+// -- Events Page
 
 // 1. QUICK VIEW MODAL FUNCTIONS
 function openQuickView(title, price, desc, stall, chef, ingredients) {
@@ -34,23 +25,42 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// 2. BOOK NOW FUNCTION
-function bookNow(itemName) {
-  alert(`🎉 "${itemName}" has been added to your cart!\n\nProceed to Book Tickets page to complete your purchase.`);
+// 2. CART FUNCTIONS
+function addToCart(itemName, itemPrice) {
+  let cart = JSON.parse(localStorage.getItem('foodfestCart')) || [];
+  cart.push({ name: itemName, price: itemPrice });
+  localStorage.setItem('foodfestCart', JSON.stringify(cart));
 }
 
-// 3. SEARCH EVENTS FUNCTIONALITY
-document.addEventListener('DOMContentLoaded', function() {
-  // Highlight current page in navbar
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.style.opacity = '0.7';
-    }
-  });
+function bookNow(itemName) {
+  addToCart(itemName, '');
+  showToast(`"${itemName}" added to cart! <a href="BookTickets.html" style="color:#fff;text-decoration:underline;">Go to Cart</a>`);
+}
 
+function confirmSlotBooking() {
+  closeQuickView();
+  addToCart(document.getElementById('m-title').innerText, document.getElementById('m-price').innerText);
+  showToast('Item added to cart! <a href="BookTickets.html" style="color:#fff;text-decoration:underline;">Go to Cart</a>');
+}
+
+// 3. Make entire product cards clickable
+function initCardClicks() {
+  document.querySelectorAll('.product-card, .wide-card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function(e) {
+      // Don't trigger if clicking a button inside the card
+      if (e.target.closest('button')) return;
+      const name = this.getAttribute('data-name') || 'Item';
+      const price = this.getAttribute('data-price') || '';
+      addToCart(name, price);
+      window.location.href = 'BookTickets.html';
+    });
+  });
+}
+
+// 4. SEARCH EVENTS FUNCTIONALITY
+document.addEventListener('DOMContentLoaded', function() {
+  initCardClicks();
   const searchInput = document.getElementById('searchInput');
   if (!searchInput) return;
 

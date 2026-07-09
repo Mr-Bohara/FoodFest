@@ -1,14 +1,4 @@
-// ==========================================
-// FORGOT PASSWORD PAGE - INTERACTIVE FEATURES
-// ==========================================
-
-// 1. MOBILE HAMBURGER TOGGLE
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
-}
+// -- Forgot Password Page
 
 // 2. FORGOT PASSWORD FORM HANDLER
 function handleForgotPassword(event) {
@@ -20,13 +10,20 @@ function handleForgotPassword(event) {
 
   // Validate email
   if (!email) {
-    shakeElement(emailInput);
+    emailInput.classList.add('shake');
+    emailInput.style.borderColor = '#EF4444';
+    setTimeout(function() {
+      emailInput.classList.remove('shake');
+      emailInput.style.borderColor = '';
+    }, 500);
     emailInput.focus();
     return;
   }
 
   if (!email.includes('@') || !email.includes('.')) {
-    showError(emailInput, 'Please enter a valid email address.');
+    showInlineError('resetEmail', 'Please enter a valid email address.');
+    emailInput.classList.add('error');
+    setTimeout(function() { emailInput.classList.remove('error'); }, 3000);
     return;
   }
 
@@ -47,49 +44,3 @@ function handleForgotPassword(event) {
   }, 1500);
 }
 
-// 3. ERROR DISPLAY
-function showError(inputElement, message) {
-  // Remove any existing error
-  const existingError = inputElement.parentElement.querySelector('.error-message');
-  if (existingError) existingError.remove();
-
-  // Add error styling
-  inputElement.style.borderColor = '#EF4444';
-  inputElement.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.2)';
-
-  // Create error message
-  const errorMsg = document.createElement('p');
-  errorMsg.className = 'error-message';
-  errorMsg.textContent = message;
-  errorMsg.style.cssText = 'color: #EF4444; font-size: 12px; margin-top: 6px; font-weight: 500;';
-  inputElement.parentElement.appendChild(errorMsg);
-
-  // Remove error after 3 seconds
-  setTimeout(function() {
-    errorMsg.remove();
-    inputElement.style.borderColor = '';
-    inputElement.style.boxShadow = '';
-  }, 3000);
-}
-
-// 4. SHAKE ANIMATION FOR INVALID INPUT
-function shakeElement(element) {
-  element.style.animation = 'shake 0.4s ease';
-  element.style.borderColor = '#EF4444';
-  setTimeout(function() {
-    element.style.animation = '';
-    element.style.borderColor = '';
-  }, 500);
-}
-
-// 5. HIGHLIGHT CURRENT PAGE IN NAV
-document.addEventListener('DOMContentLoaded', function() {
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) {
-      link.style.opacity = '0.7';
-    }
-  });
-});

@@ -1,21 +1,21 @@
-// ==========================================
-// FOOD STALLS PAGE - FILTER & SEARCH
-// ==========================================
+// -- Food Stalls Page
 
-function toggleMenu() {
-  const navLinks = document.getElementById('navLinks');
-  const hamburger = document.getElementById('hamburgerBtn');
-  if (navLinks) navLinks.classList.toggle('open');
-  if (hamburger) hamburger.classList.toggle('active');
+function addToCart(itemName, itemPrice) {
+  let cart = JSON.parse(localStorage.getItem('foodfestCart')) || [];
+  cart.push({ name: itemName, price: itemPrice });
+  localStorage.setItem('foodfestCart', JSON.stringify(cart));
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Highlight current page in nav
-  const currentPage = window.location.pathname.split('/').pop();
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentPage) link.style.opacity = '0.7';
+  // Make stall cards clickable
+  document.querySelectorAll('.stall-card').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', function() {
+      const name = this.getAttribute('data-name') || 'Item';
+      const price = this.getAttribute('data-price') || '';
+      addToCart(name, price);
+      window.location.href = 'BookTickets.html';
+    });
   });
 
   // Search functionality
