@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodFest - About Us</title>
+  <title>FoodFest 2026 - About Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../css/About.css">
 </head>
@@ -30,82 +30,109 @@
   </nav>
 
   <main>
-    <!-- HERO -->
-    <section class="about-hero">
-      <span class="hero-year-badge">2026</span>
+    <header class="hero-section">
+      <span class="year-badge">EST. 2026</span>
       <h1>The Future of Flavour</h1>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="window.location.href='Event.html'">Explore Our Festival</button>
-        <button class="btn-secondary" onclick="document.getElementById('missions').scrollIntoView({behavior:'smooth'})">Our Missions</button>
+      <p class="hero-desc">Where culinary passion meets innovation — we're not just creating meals, we're forging experiences that leave a lasting impression on your soul.</p>
+      <div class="btn-group">
+        <button class="btn-main primary" onclick="alert('Exploring Map!')">Explore our Festival</button>
+        <button class="btn-main secondary" onclick="alert('Redirecting to Missions!')">Our Missions</button>
       </div>
-    </section>
+    </header>
 
-    <!-- BEYOND THE PLATE -->
-    <section class="beyond-section" id="missions">
-      <div class="content-card">
+    <section class="beyond-section">
+      <div class="beyond-content">
         <h2>Beyond the Plate</h2>
-        <p>FoodFest 2026 is not just a festival — it's a movement. We bring together the world's most innovative chefs, food technologists, and culinary artists to redefine what food means in the modern era. Every dish tells a story, every flavor carries a memory, and every experience is crafted to inspire.</p>
+        <p>FoodFest was born around a humble campfire in 2020, when a group of visionary chefs dared to imagine a festival where fire, flavor, and community converged. What started as an intimate gathering of 50 food enthusiasts has since grown into a global movement — the world's most anticipated culinary celebration.</p>
+        <div class="quote-box">
+          <p>"Every dish tells a story of heritage, innovation, and the universal language of great food."</p>
+        </div>
+      </div>
+      <div class="image-stack">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Gourmet BBQ Meat Grid" class="stack-img back">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80" alt="Live Fire Culinary Grilling" class="stack-img front">
       </div>
     </section>
 
-    <!-- PILLARS -->
-    <section class="pillars-section">
-      <h2 class="section-title">Our Foundations</h2>
-      <p class="section-subtitle">The Three pillars that guide every experience we crave</p>
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <h3>Innovation</h3>
-          <p>Pushing the boundaries of gastronomy with cutting-edge techniques and molecular gastronomy.</p>
+    <div class="foundations-wrapper">
+      <section class="foundations-container">
+        <h2>Our Foundations</h2>
+        <p class="section-subtitle">The Three pillars that guide every experience we crave</p>
+        
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-fire"></i></div>
+            <h3>Passion</h3>
+            <p>Every dish is crafted with an uncompromising fire — a relentless pursuit of flavor that ignites the senses and leaves a lasting imprint.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Innovation</h3>
+            <p>We push culinary boundaries with molecular gastronomy, precision techniques, and daring flavor combinations that redefine what's possible.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Community</h3>
+            <p>Food brings us together. We build bridges between cultures, creating shared moments of joy around the universal table of great cuisine.</p>
+          </div>
         </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
-          <h3>Passion</h3>
-          <p>Every chef, every ingredient, every dish is a labor of love and dedication to the craft.</p>
-        </div>
-        <div class="pillar-card">
-          <div class="pillar-icon"><i class="fa-solid fa-globe"></i></div>
-          <h3>Community</h3>
-          <p>Building bridges between cultures through the universal language of food and shared tables.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- MASTERS -->
-    <section class="masters-section">
-      <h2 class="section-title">The Masters</h2>
+        <div class="showcase-banner">
+          <div class="showcase-card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80" alt="Signature Steaks" class="showcase-img">
+            <div class="showcase-label">Fine Dining Art</div>
+          </div>
+          <div class="showcase-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="Woodfired Pizza" class="showcase-img">
+            <div class="showcase-label">Live Fire Oven</div>
+          </div>
+          <div class="showcase-card">
+            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=500&q=80" alt="Molecular Gastronomy Desserts" class="showcase-img">
+            <div class="showcase-label">Avant-Garde Treats</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="masters-container">
+      <h2>Meet the Masters</h2>
+      <p class="masters-heading-desc">Visionary chefs who fuel the fire of FoodFest 2026</p>
+
       <div class="masters-grid">
         <div class="master-card">
-          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&h=400&q=80" alt="Chef Kenji Sato" class="master-img">
           <h3>Chef Kenji Sato</h3>
-          <p>Tokyo Fusion</p>
+          <span class="master-role">Tokyo Fusion</span>
+          <p class="master-bio">Master of blending ancient heritage recipes with avant-garde modern techniques.</p>
         </div>
         <div class="master-card">
-          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=400&h=400&q=80" alt="Chef Elena Rostova" class="master-img">
           <h3>Chef Elena Rostova</h3>
-          <p>Molecular Gastronomy</p>
+          <span class="master-role">Molecular Gastronomy</span>
+          <p class="master-bio">Pioneer in deconstructive cuisine, chemical flavor balance, and food science.</p>
         </div>
         <div class="master-card">
-          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&w=400&h=400&q=80" alt="Pitmaster Dev Thapa" class="master-img">
           <h3>Pitmaster Dev Thapa</h3>
-          <p>Smoke & Grill</p>
+          <span class="master-role">Smoke & Grill</span>
+          <p class="master-bio">Legend of live artisanal open fire cooking and structural smoking traditions.</p>
         </div>
         <div class="master-card">
-          <div class="master-avatar"><i class="fa-solid fa-user-chef"></i></div>
+          <img src="https://images.unsplash.com/photo-1607990283143-e81e7a2c93ab?auto=format&fit=crop&w=400&h=400&q=80" alt="Chef Luigi Rossi" class="master-img">
           <h3>Chef Luigi Rossi</h3>
-          <p>Italian Patisserie</p>
+          <span class="master-role">Italian Patisserie</span>
+          <p class="master-bio">Award-winning sweet pastry architect adding sugar magic to every plate.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-      <h2>Be Part of the Evolution</h2>
-      <p>Join us at FoodFest 2026 and witness the future of food unfold.</p>
-      <button class="btn-primary" onclick="window.location.href='BookTickets.html'">Get Your Tickets</button>
+    <section class="cta-banner">
+      <h3>Be Part of the Evolution</h3>
+      <p>FoodFest 2026 is more than an event — it's a complete awakening of the human senses. Secure your seat at our global dining table today.</p>
+      <button class="btn-cta" onclick="alert('Tickets Section Coming Soon!')">Get Your Tickets Now</button>
     </section>
   </main>
-
+  
   <footer class="footer">
     <div class="footer-column">
       <h3>NAVIGATION</h3>

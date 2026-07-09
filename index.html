@@ -6,6 +6,8 @@
   <title>FoodFest 2026 - Home</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/Home.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images\logo\f_logo.png">
 </head>
 <body>
 
@@ -29,87 +31,144 @@
     </div>
   </nav>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-      <div class="hero-badge">
-        <span class="hero-year">2026</span>
-        <span class="hero-vip">VIP ACCESS</span>
-      </div>
-      <h1 class="hero-title">Food Fest</h1>
-      <p class="hero-subtitle">Experience the Gala</p>
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="window.location.href='pages/BookTickets.html'">Buy Now</button>
-        <button class="btn-secondary" onclick="window.location.href='pages/Event.html'">View Menu</button>
-      </div>
-      <div class="hero-price-badge">
-        <span class="price-label">Starts From</span>
-        <span class="price-value">$299</span>
-      </div>
-    </section>
+    <header class="hero-section">
+    <main class="hero-container">
+      
+      <section class="left-content">
+        <span class="year-badge">2026</span>
+        <h1 class="main-title">Food Fest</h1>
+        <p class="hero-description">
+          Experience the global reimagining of gastronomy in the heart of Kathmandu. Joining forces with world-renowned Michelin chefs and authentic master artisans, FoodFest 2026 bridges technological fine dining innovation with timeless cultural recipe heritages.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" onclick="alert('Welcome to the Food Fest Gala portal.')">Experience the Gala</button>
+          <button class="btn btn-secondary" onclick="alert('Loading interactive digital menu portfolio...')">View Menu</button>
+        </div>
+      </section>
 
-    <!-- COUNTDOWN SECTION -->
-    <section class="countdown-section">
-      <h2 class="section-title">Counting Down to Perfection</h2>
-      <p class="section-subtitle">The Festival Begins In</p>
-      <div class="countdown-grid">
-        <div class="countdown-item">
-          <span class="countdown-number" id="countdown-days">00</span>
-          <span class="countdown-label">DAYS</span>
+      <section class="right-content">
+        <div class="vip-card">
+          <div class="floating-badge">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          
+          <span class="card-subtitle">VIP ACCESS</span>
+          <h2 class="card-title">Digital Pass 2026</h2>
+
+          <ul class="card-perks-list">
+            <li><i class="fa-solid fa-circle-check"></i> Unlimited Access to All 45+ Premium Food Stalls</li>
+            <li><i class="fa-solid fa-circle-check"></i> VIP Fast-Track Entry Lines & Lounges</li>
+            <li><i class="fa-solid fa-circle-check"></i> Front-Row Seats to Live Michelin Cooking Demos</li>
+          </ul>
+
+          <hr class="card-divider">
+
+          <div class="card-footer">
+            <div class="price-tag">
+              <span class="price-label">Starts From</span>
+              <span class="price-amount">$299</span>
+            </div>
+            <button class="btn-buy" onclick="alert('Adding 1x VIP Digital Pass 2026 to secure checkout wallet.')">Buy Now</button>
+          </div>
         </div>
-        <div class="countdown-divider">:</div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="countdown-hours">00</span>
-          <span class="countdown-label">HOURS</span>
-        </div>
-        <div class="countdown-divider">:</div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="countdown-minutes">00</span>
-          <span class="countdown-label">MINUTES</span>
-        </div>
-        <div class="countdown-divider">:</div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="countdown-seconds">00</span>
-          <span class="countdown-label">SECONDS</span>
+      </section>
+
+    </main>
+  </header>
+
+  <div class="container">
+    
+    <p class="section-subtitle">Counting Down to Perfection</p>
+    <h2 class="section-title">The Festival Begins In</h2>
+    
+    <div class="countdown-container">
+      <div class="countdown-box">
+        <div class="countdown-value" id="days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-value" id="hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-value" id="minutes">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-value" id="seconds">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+
+    <div class="culture-header-row">
+      <div>
+        <p class="section-subtitle">Explore Our Culture</p>
+        <h2 class="section-title">Signature Culture</h2>
+      </div>
+      <div class="carousel-controls">
+        <button class="control-btn" onclick="console.log('Previous dynamic slide requested.')" aria-label="Previous Slide">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="control-btn" onclick="console.log('Next dynamic slide requested.')" aria-label="Next Slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid-three-columns">
+      <div class="culture-card" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80')">
+        <div class="card-content">
+          <span class="card-tag">Artisan Fusion</span>
+          <h3 class="card-item-title">Himalayan Herbs</h3>
+          <p class="card-item-desc">Discover complex mountain profiles reimagined through high-altitude foraging and modern molecular chemistry.</p>
         </div>
       </div>
-    </section>
-
-    <!-- CULTURE / EXPLORE SECTION -->
-    <section class="culture-section">
-      <h2 class="section-title">Explore Our Culture</h2>
-      <div class="culture-cards">
-        <div class="culture-card">
-          <div class="culture-icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3>Signature Culture</h3>
-          <p>Immerse yourself in a curated world of flavors where tradition meets innovation.</p>
-        </div>
-        <div class="culture-card">
-          <div class="culture-icon"><i class="fa-solid fa-microphone"></i></div>
-          <h3>Voice of Gala</h3>
-          <p>Shared experiences from renowned chefs and culinary artists from around the globe.</p>
-        </div>
-        <div class="culture-card">
-          <div class="culture-icon"><i class="fa-solid fa-handshake"></i></div>
-          <h3>Shared Experiences</h3>
-          <p>Connect with fellow food enthusiasts and create unforgettable memories together.</p>
+      <div class="culture-card" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80')">
+        <div class="card-content">
+          <span class="card-tag">Fire &amp; Craft</span>
+          <h3 class="card-item-title">Smokehouse Heritage</h3>
+          <p class="card-item-desc">Slow-braised meats tracking hundreds of years of nomadic open-pit fire seasoning techniques.</p>
         </div>
       </div>
-    </section>
+      <div class="culture-card" style="background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=500&q=80')">
+        <div class="card-content">
+          <span class="card-tag">Sweet Mastery</span>
+          <h3 class="card-item-title">Avant-Garde Pastry</h3>
+          <p class="card-item-desc">Deconstructed desserts that challenge physical textures utilizing flash-freeze air tunnels.</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- PARTNERS SECTION -->
-    <section class="partners-section">
-      <h2 class="section-title">Our Partners in Excellence</h2>
+    <p class="section-subtitle">Voice of Gala</p>
+    <h2 class="section-title">Shared Experiences</h2>
+
+    <div class="grid-two-columns">
+      <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80')"></div>
+        <p class="testimonial-text">"An absolute triumph of taste and presentation. The layout, digital infrastructure, and depth of international flavors completely blew away my expectations."</p>
+        <p class="testimonial-author">— Aria Sharma, Culinary Critic</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80')"></div>
+        <p class="testimonial-text">"A masterfully coordinated venue. Getting face-to-face feedback from hundreds of food enthusiasts inside such a modern setup was unforgettable."</p>
+        <p class="testimonial-author">— Chef Marcus Vance, Presenter</p>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="partners-section">
+    <div class="partners-inner">
+      <p class="section-subtitle">Our Partners in Excellence</p>
       <div class="partners-grid">
-        <div class="partner-item"><i class="fa-solid fa-building"></i> Gourmet Co.</div>
-        <div class="partner-item"><i class="fa-solid fa-leaf"></i> Organic Farms</div>
-        <div class="partner-item"><i class="fa-solid fa-wine-glass"></i> Vino Select</div>
-        <div class="partner-item"><i class="fa-solid fa-cake"></i> Artisan Bakes</div>
-        <div class="partner-item"><i class="fa-solid fa-fish"></i> Fresh Catch</div>
-        <div class="partner-item"><i class="fa-solid fa-seedling"></i> Green Fields</div>
+        <div class="partner-logo-placeholder"><i class="fa-solid fa-wine-glass"></i> Gourmet Global</div>
+        <div class="partner-logo-placeholder"><i class="fa-solid fa-leaf"></i> EcoOrganics</div>
+        <div class="partner-logo-placeholder"><i class="fa-solid fa-building-columns"></i> National Arts</div>
+        <div class="partner-logo-placeholder"><i class="fa-solid fa-droplet"></i> Alpine Springs</div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
 
   <footer class="footer">
     <div class="footer-column">

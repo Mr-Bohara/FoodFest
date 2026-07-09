@@ -9,37 +9,119 @@ function toggleMenu() {
   if (hamburger) hamburger.classList.toggle('active');
 }
 
-// 1. LOGIN FORM HANDLER
-function handleLogin(event) {
-  event.preventDefault();
-  const email = document.getElementById('loginEmail').value;
-  const password = document.getElementById('loginPassword').value;
+// ==========================================
+// 1. PASSWORD VISIBILITY TOGGLE
+// ==========================================
+function togglePassword() {
+  const passwordInput = document.getElementById('loginPassword');
+  const toggleIcon = document.getElementById('toggleIcon');
   
-  // Simple validation
-  if (!email || !password) {
-    alert('Please enter both email and password.');
-    return;
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    toggleIcon.className = 'fa-regular fa-eye-slash';
+  } else {
+    passwordInput.type = 'password';
+    toggleIcon.className = 'fa-regular fa-eye';
   }
-  
-  if (!email.includes('@')) {
-    alert('Please enter a valid email address.');
-    return;
-  }
-  
-  alert(`Welcome back! You have been logged in successfully.\n\nRedirecting to your dashboard...`);
-  // In a real app: window.location.href = 'Home.html';
 }
 
-// 2. GOOGLE SIGN-IN BUTTON
+// ==========================================
+// 2. LOGIN FORM HANDLER
+// ==========================================
+function handleLogin(event) {
+  event.preventDefault();
+  
+  const email = document.getElementById('loginEmail');
+  const password = document.getElementById('loginPassword');
+  const loginCard = document.querySelector('.login-card');
+  
+  // Remove any existing error states
+  email.classList.remove('error', 'success');
+  password.classList.remove('error', 'success');
+  loginCard.classList.remove('shake');
+  
+  let isValid = true;
+  let errorMsg = '';
+  
+  // Email validation
+  if (!email.value.trim()) {
+    email.classList.add('error');
+    errorMsg = 'Please enter your email address.';
+    isValid = false;
+  } else if (!email.value.includes('@') || !email.value.includes('.')) {
+    email.classList.add('error');
+    errorMsg = 'Please enter a valid email address.';
+    isValid = false;
+  } else {
+    email.classList.add('success');
+  }
+  
+  // Password validation
+  if (!password.value) {
+    password.classList.add('error');
+    if (!errorMsg) errorMsg = 'Please enter your password.';
+    isValid = false;
+  } else if (password.value.length < 6) {
+    password.classList.add('error');
+    if (!errorMsg) errorMsg = 'Password must be at least 6 characters.';
+    isValid = false;
+  } else {
+    password.classList.add('success');
+  }
+  
+  if (!isValid) {
+    // Shake animation on the card
+    loginCard.classList.add('shake');
+    setTimeout(() => loginCard.classList.remove('shake'), 500);
+    return;
+  }
+  
+  // Success - animate the button
+  const submitBtn = document.querySelector('.submit-btn');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnIcon = submitBtn.querySelector('.btn-icon');
+  
+  submitBtn.disabled = true;
+  btnText.textContent = 'Signing In...';
+  btnIcon.className = 'fa-solid fa-spinner btn-icon fa-spin';
+  
+  // Simulate sign in delay
+  setTimeout(() => {
+    alert(`Welcome back! You have been logged in successfully.\n\nRedirecting to your dashboard...`);
+    
+    // Reset button state
+    submitBtn.disabled = false;
+    btnText.textContent = 'Sign In';
+    btnIcon.className = 'fa-solid fa-arrow-right btn-icon';
+    email.classList.remove('success');
+    password.classList.remove('success');
+    document.getElementById('loginForm').reset();
+    
+    // In a real app: window.location.href = 'Home.html';
+  }, 800);
+}
+
+// ==========================================
+// 3. GOOGLE SIGN-IN BUTTON
+// ==========================================
 document.addEventListener('DOMContentLoaded', function() {
   const googleBtn = document.querySelector('.google-btn');
   if (googleBtn) {
     googleBtn.addEventListener('click', function() {
-      alert('Google Sign-In integration will be available soon. Please use email login for now.');
+      // Add a brief loading state
+      const originalContent = this.innerHTML;
+      this.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Connecting...</span>';
+      this.disabled = true;
+      
+      setTimeout(() => {
+        alert('Google Sign-In integration will be available soon. Please use email login for now.');
+        this.innerHTML = originalContent;
+        this.disabled = false;
+      }, 600);
     });
   }
-
-  // 3. HIGHLIGHT CURRENT PAGE IN NAV
+  
+  // 4. HIGHLIGHT CURRENT PAGE IN NAV
   const currentPage = window.location.pathname.split('/').pop();
   const navLinks = document.querySelectorAll('.nav-links a');
   navLinks.forEach(link => {
@@ -48,4 +130,34 @@ document.addEventListener('DOMContentLoaded', function() {
       link.style.opacity = '0.7';
     }
   });
+  
+  // 5. REAL-TIME INPUT VALIDATION CLEAR
+  const emailInput = document.getElementById('loginEmail');
+  const passwordInput = document.getElementById('loginPassword');
+  
+  if (emailInput) {
+    emailInput.addEventListener('input', function() {
+      if (this.classList.contains('error')) {
+        if (this.value.includes('@') && this.value.includes('.')) {
+          this.classList.remove('error');
+          this.classList.add('success');
+        } else {
+          this.classList.remove('success');
+        }
+      }
+    });
+  }
+  
+  if (passwordInput) {
+    passwordInput.addEventListener('input', function() {
+      if (this.classList.contains('error') && this.value.length >= 6) {
+        this.classList.remove('error');
+        this.classList.add('success');
+      } else if (this.value.length < 6) {
+        this.classList.remove('success');
+      }
+    });
+  }
+  
+  // 6. ENTER KEY SUPPORT (handled by form submit)
 });
